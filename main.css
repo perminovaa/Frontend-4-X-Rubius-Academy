@@ -1,0 +1,324 @@
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat';
+    color: #333;
+    max-width: 1440px;
+    min-width: 1440px;  /*зафикс.размер страницы*/
+    margin: auto;
+    height: 100%;  
+}
+
+a {
+    color: #278aff;
+}
+
+h2 {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 32px;
+}
+
+h3 {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0 165px;
+}
+
+.main {
+    flex: auto;
+}
+
+section:not(:first-child) {
+    padding-top: 100px;
+}
+
+/*шапка*/
+
+.header-top {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;  
+    padding: 30px 0 0 0;
+    position: sticky;
+    background-attachment: scroll;
+    background-color: #ffffff;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.navigation ul {
+    display: flex;
+    list-style: none;
+    font-size: 14px; 
+    font-weight: 500;
+    padding: 0;
+}
+
+.navigation ul li:not(:last-child) {
+    margin-right: 28px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #333;
+}
+
+.phoneinfo {
+    text-align: right;
+}
+
+.phoneinfo a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.phoneinfo div {
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+/* превью */
+
+.Headerbackgroung {
+    background-image: url(/image/fon.png);
+    background-size: cover;
+    margin: 0 -165px;
+    margin-top: -113px;
+}
+
+.header-bottom {
+    display: flex;
+    align-items: end;
+    justify-content: space-between; 
+    overflow: hidden;
+    margin: 0 165px;
+    padding-top: 113px;
+}
+
+.titul h1 {
+    margin: 136px 0 17px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+}
+
+.titul p {
+    margin: 0 0 59px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.titul button {
+    margin-bottom: 136px;
+    height: 48px;
+    width: 203px;
+    border-radius: 24px;
+    border: none;
+    color:#ffffff;
+    background-color: #FB9475;
+    transition: .3s transform;
+    margin-left: 5px;
+}
+
+.titul button:hover {
+    transform: scale(1.05);
+}
+
+.lady {
+    position: relative;
+    margin-right: 65px;
+}
+
+.lady img {
+    margin-bottom: -5px;  
+    position: relative;
+    width: 524px;
+    max-height: 100%;
+}
+
+.lady:hover:before {
+    transform: scale(1.03);
+}
+
+.lady:before {
+    content: '';
+    width: 472px;
+    height: 472px;
+    border-radius: 50%;
+    background-color: #FB9475;
+    position: absolute;
+    bottom: -110px;
+    right: 0;
+    transition: .3s transform;
+}
+
+.socmedia {
+   margin-bottom: 234px;
+}
+
+.socmedialogo {
+    object-fit:contain;
+    width: 30px;
+    height: 30px;
+}
+
+.socmedia ul {
+    list-style: none;
+    padding: 0;
+}
+
+.socmedia ul li {
+    height: 28px;
+    margin: 0 0 20px;
+}
+
+/*О салоне*/
+
+.salongroup {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.textsalon {
+    width: 50%;
+}
+
+.textsalon div {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.textsalon p {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.videosalon {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+}
+
+.videosalon img {
+    filter: brightness(80%);
+    object-fit:contain;
+    width: 445px;
+    height: 300px;
+}
+
+.videosalon:before {
+    content: url(/image/iconvideo.png);
+    position: absolute;
+    z-index: 1;
+    transition: .3s transform;
+    margin-bottom: 25px;
+}
+
+.videosalon:after {
+    content: 'Короткое видео о нас';
+    position: absolute;
+    z-index: 1;
+    text-align: right;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    margin-top: 73px;
+}
+
+.videosalon:hover:before {
+    transform: scale(1.1);
+}
+
+/*Преимущества*/
+
+.plus {
+    display: flex;
+    text-align: center;
+    justify-content:space-between; 
+    gap: 25px;
+    line-height: 22px;
+    padding: 100px 0 100px;  /* убрать нижний при добав. след. блока */ 
+}
+
+.icon {
+    object-fit:contain;
+    width: 48px;
+    height: 48px; 
+}
+
+.plus div {
+    width: 350px;
+    height: auto;
+}
+
+.plus h3 {
+    margin: 28px 0 12px;
+}
+
+.plus p {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 0;
+}
+
+
+/*Подвал*/
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+.footerinfo div {
+    margin-bottom: 8px;
+}
+
+.footernavigation ul {
+    display: flex;
+    list-style: none;
+}
+
+.footernavigation ul li:not(:last-child) {
+    margin-right: 28px;
+}
+
+.footernavigation a {
+    text-decoration: none;
+    color: #333;
+}
+
+/*доп*/
+
+a:hover {
+    color: #00BF78;
+}
