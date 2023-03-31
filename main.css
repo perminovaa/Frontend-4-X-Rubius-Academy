@@ -9,9 +9,9 @@ html {
 }
 
 body {
+    height: 100%;  
     font-family: 'Montserrat';
     color: #333;
-    height: 100%;  
 }
 
 a {
@@ -23,13 +23,14 @@ a:hover {
 }
 
 .btn {
+    width: 112px;
+    height: 34px;
     border: none;
     color:#ffffff;
     background-color: #FB9475;
     transition: .3s transform;
     border-radius: 24px;
-    width: 112px;
-    height: 34px;
+    cursor: pointer;
 }
 
 .wrapper {
@@ -70,19 +71,20 @@ section:not(:first-child) {
 }
 
 /*шапка*/
+
 header {
-    background-image: url(./image/fon.png);
-    background-color: #ffffff;
+    z-index: 1;
     position: sticky;
     top: 0;
-    z-index: 1;
+    background-image: url(./image/fon.png);
+    background-color: #ffffff;
 }
 
 .header-top {
+    padding: 30px 0 10px 0;
     display: flex;
     align-items: baseline;
     justify-content: space-between;  
-    padding: 30px 0 10px 0;  
 }
 
 .logo {
@@ -93,11 +95,18 @@ header {
 }
 
 .navigation__list {
+    padding: 0;
+    width: 700px;
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     list-style: none;
     font-size: 14px; 
     font-weight: 500;
-    padding: 0;
+}
+
+.navigation__item {
+    margin: 5px 0 5px 0;
 }
 
 .navigation__item:not(:last-child) {
@@ -127,7 +136,7 @@ header {
 
 /* превью */
 
- .header-bottom {
+.header-bottom {
     background-image: url(./image/fon.png);
     background-size: cover;
 }
@@ -169,10 +178,10 @@ header {
 }
 
 .header-bottom__lady img {
-    margin-bottom: -5px;  
     position: relative;
     width: 524px;
     max-height: 100%;
+    margin-bottom: -5px; 
 }
 
 .header-bottom__lady:hover:before {
@@ -180,14 +189,14 @@ header {
 }
 
 .header-bottom__lady:before {
-    content: '';
-    width: 472px;
-    height: 472px;
-    border-radius: 50%;
-    background-color: #FB9475;
     position: absolute;
     bottom: -110px;
     right: 0;
+    width: 472px;
+    height: 472px;
+    border-radius: 50%;
+    content: '';
+    background-color: #FB9475;
     transition: .3s transform;
 }
 
@@ -196,14 +205,14 @@ header {
 }
 
 .socmedia__logo {
-    object-fit:contain;
     width: 30px;
     height: 30px;
+    object-fit:contain;
 }
 
 .socmedia__list {
-    list-style: none;
     padding: 0;
+    list-style: none;
 }
 
 .socmedia__item {
@@ -213,9 +222,9 @@ header {
 
 /*О салоне*/
 .section__title {
+    margin: 0 0 32px;
     font-size: 48px;
     font-weight: 700;
-    margin: 0 0 32px;
 }
 
 .inner__about {
@@ -243,33 +252,38 @@ header {
     display: flex; 
     align-items: center;
     justify-content: center;
+    
 }
 
 .about__video img {
-    filter: brightness(80%);
-    object-fit:contain;
     width: 445px;
     height: 300px;
+    object-fit:contain;
+    border-radius: 8px;
+    cursor: pointer; 
+    filter: brightness(80%);
 }
 
 .about__video:before {
-    content: url(./image/iconvideo.png);
-    position: absolute;
     z-index: 1;
-    transition: .3s transform;
+    position: absolute;
     margin-bottom: 25px;
+    content: url(./image/iconvideo.png);
+    transition: .3s transform;
+    cursor: pointer;
 }
 
 .about__video:after {
+    z-index: 1;
+    margin-top: 73px;
     content: 'Короткое видео о нас';
     position: absolute;
-    z-index: 1;
-    text-align: right;
-    color: white;
     font-weight: 500;
     font-size: 16px;
     line-height: 26px;
-    margin-top: 73px;
+    text-align: right;
+    color: white;
+    cursor: pointer;
 }
 
 .about__video:hover:before {
@@ -279,19 +293,19 @@ header {
 /*Преимущества*/
 
 .plus {
+    padding: 100px 0 100px;  /* убрать нижний при добав. след. блока */ 
     display: flex;
     text-align: center;
     justify-content:space-between; 
+    flex-wrap: wrap;
     gap: 25px;
     line-height: 22px;
-    padding: 100px 0 100px;  /* убрать нижний при добав. след. блока */ 
-    flex-wrap: wrap;
 }
 
 .plus__icon {
-    object-fit:contain;
     width: 48px;
     height: 48px; 
+    object-fit:contain;
 }
 
 .plus__container {
@@ -312,4 +326,5 @@ header {
 .navigation__list_font-weight {
     font-weight: 400;
     font-size: 12px;
+    justify-content: end;
 }
