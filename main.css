@@ -11,9 +11,6 @@ html {
 body {
     font-family: 'Montserrat';
     color: #333;
-    max-width: 1440px;
-    min-width: 1440px;  /*зафикс.размер страницы*/
-    margin: auto;
     height: 100%;  
 }
 
@@ -21,25 +18,27 @@ a {
     color: #278aff;
 }
 
-h2 {
-    font-size: 48px;
-    font-weight: 700;
-    margin: 0 0 32px;
+a:hover {
+    color: #00BF78;
 }
 
-h3 {
-    font-size: 18px;
-    line-height: 22px;
+.btn {
+    border: none;
+    color:#ffffff;
+    background-color: #FB9475;
+    transition: .3s transform;
+    border-radius: 24px;
+    width: 112px;
+    height: 34px;
 }
 
 .wrapper {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin: 0 165px;
 }
 
-.main {
+main {
     flex: auto;
 }
 
@@ -47,18 +46,43 @@ section:not(:first-child) {
     padding-top: 100px;
 }
 
+.container {
+    max-width: 1110px;
+    margin: auto;
+}
+
+.title {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 22px;
+} 
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px 0;
+    font-size: 12px;
+}
+
 /*шапка*/
+header {
+    background-image: url(./image/fon.png);
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
 
 .header-top {
     display: flex;
     align-items: baseline;
     justify-content: space-between;  
-    padding: 30px 0 0 0;
-    position: sticky;
-    background-attachment: scroll;
-    background-color: #ffffff;
-    top: 0;
-    z-index: 1;
+    padding: 30px 0 10px 0;  
 }
 
 .logo {
@@ -68,7 +92,7 @@ section:not(:first-child) {
     font-weight: 700;
 }
 
-.navigation ul {
+.navigation__list {
     display: flex;
     list-style: none;
     font-size: 14px; 
@@ -76,11 +100,11 @@ section:not(:first-child) {
     padding: 0;
 }
 
-.navigation ul li:not(:last-child) {
+.navigation__item:not(:last-child) {
     margin-right: 28px;
 }
 
-.navigation a {
+.navigation__link {
     text-decoration: none;
     color: #333;
 }
@@ -89,82 +113,73 @@ section:not(:first-child) {
     text-align: right;
 }
 
-.phoneinfo a {
+.phoneinfo__tel {
     font-size: 18px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
 }
 
-.phoneinfo div {
+.phoneinfo__time {
     font-size: 11px;
     margin-top: 8px;
 }
 
 /* превью */
 
-.Headerbackgroung {
-    background-image: url(/image/fon.png);
+ .header-bottom {
+    background-image: url(./image/fon.png);
     background-size: cover;
-    margin: 0 -165px;
-    margin-top: -113px;
 }
 
-.header-bottom {
+.header-bottom__container {
     display: flex;
     align-items: end;
     justify-content: space-between; 
     overflow: hidden;
-    margin: 0 165px;
-    padding-top: 113px;
 }
 
-.titul h1 {
+.header-bottom__title {
     margin: 136px 0 17px;
     font-size: 48px;
     font-weight: 600;
     line-height: 59px;
 }
 
-.titul p {
+.header-bottom__subtitle{
     margin: 0 0 59px;
     font-size: 20px;
     line-height: 24px;
 }
 
-.titul button {
+.header-bottom__btn { 
     margin-bottom: 136px;
     height: 48px;
     width: 203px;
-    border-radius: 24px;
-    border: none;
-    color:#ffffff;
-    background-color: #FB9475;
-    transition: .3s transform;
     margin-left: 5px;
 }
 
-.titul button:hover {
+.header-bottom__btn:hover {
     transform: scale(1.05);
 }
 
-.lady {
+.header-bottom__lady {
     position: relative;
     margin-right: 65px;
 }
 
-.lady img {
+.header-bottom__lady img {
     margin-bottom: -5px;  
     position: relative;
     width: 524px;
     max-height: 100%;
 }
 
-.lady:hover:before {
+.header-bottom__lady:hover:before {
     transform: scale(1.03);
 }
 
-.lady:before {
+.header-bottom__lady:before {
     content: '';
     width: 472px;
     height: 472px;
@@ -176,71 +191,76 @@ section:not(:first-child) {
     transition: .3s transform;
 }
 
-.socmedia {
+.header-bottom__socmedia {
    margin-bottom: 234px;
 }
 
-.socmedialogo {
+.socmedia__logo {
     object-fit:contain;
     width: 30px;
     height: 30px;
 }
 
-.socmedia ul {
+.socmedia__list {
     list-style: none;
     padding: 0;
 }
 
-.socmedia ul li {
+.socmedia__item {
     height: 28px;
     margin: 0 0 20px;
 }
 
 /*О салоне*/
+.section__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0 0 32px;
+}
 
-.salongroup {
+.inner__about {
     display: flex;
     justify-content: space-between; 
     align-items: center;
 }
 
-.textsalon {
+.about__salontext {
     width: 50%;
 }
 
-.textsalon div {
+.text__title {
     font-size: 20px;
     line-height: 32px;
 }
 
-.textsalon p {
+.text__subtitle {
     font-size: 16px;
     line-height: 26px;
 }
 
-.videosalon {
+.about__video {
     position: relative; 
     display: flex; 
     align-items: center;
     justify-content: center;
 }
 
-.videosalon img {
+.about__video img {
     filter: brightness(80%);
     object-fit:contain;
     width: 445px;
     height: 300px;
 }
 
-.videosalon:before {
-    content: url(/image/iconvideo.png);
+.about__video:before {
+    content: url(./image/iconvideo.png);
     position: absolute;
     z-index: 1;
     transition: .3s transform;
     margin-bottom: 25px;
 }
 
-.videosalon:after {
+.about__video:after {
     content: 'Короткое видео о нас';
     position: absolute;
     z-index: 1;
@@ -252,7 +272,7 @@ section:not(:first-child) {
     margin-top: 73px;
 }
 
-.videosalon:hover:before {
+.about__video:hover:before {
     transform: scale(1.1);
 }
 
@@ -265,60 +285,31 @@ section:not(:first-child) {
     gap: 25px;
     line-height: 22px;
     padding: 100px 0 100px;  /* убрать нижний при добав. след. блока */ 
+    flex-wrap: wrap;
 }
 
-.icon {
+.plus__icon {
     object-fit:contain;
     width: 48px;
     height: 48px; 
 }
 
-.plus div {
+.plus__container {
     width: 350px;
     height: auto;
 }
 
-.plus h3 {
+.plus__title {
     margin: 28px 0 12px;
 }
 
-.plus p {
-    font-size: 14px;
-    line-height: 22px;
-    margin: 0;
-}
-
-
 /*Подвал*/
 
-footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    padding: 20px 0;
-    font-size: 12px;
-}
-
-.footerinfo div {
+.footer__title {
     margin-bottom: 8px;
 }
 
-.footernavigation ul {
-    display: flex;
-    list-style: none;
-}
-
-.footernavigation ul li:not(:last-child) {
-    margin-right: 28px;
-}
-
-.footernavigation a {
-    text-decoration: none;
-    color: #333;
-}
-
-/*доп*/
-
-a:hover {
-    color: #00BF78;
+.navigation__list_font-weight {
+    font-weight: 400;
+    font-size: 12px;
 }

@@ -6,122 +6,133 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/">
     <link rel="stylesheet" href="./main.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header-top">
-            <a class="logo" href="/">Мир красоты</a>
-    
-            <nav class="navigation">
-                <ul>
-                    <li><a href="#prace">Услуги и цены</a></li>
-                    <li><a href="#master">Мастера</a></li>
-                    <li><a href="#work">Наши работы</a></li>
-                    <li><a href="#salon">О нас</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
+        <header>
+            <div class="container">
+                <div class="header-top">
+                    <a class="logo" href="/">Мир красоты</a>
+            
+                    <nav class="navigation header-top__navigation">
+                        <ul class="navigation__list">
+                            <li class="navigation__item"><a class="navigation__link" href="#prace">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#master">Мастера</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#work">Наши работы</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#salon">О нас</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#contact">Контакты</a></li>
+                        </ul>
+                    </nav>
 
-            <div class="phoneinfo">
-                <a href="tel:84996861762">8 (499) 686-17-62</a>
-                <div>с 10.00 до 19.00 без выходных</div>
+                    <div class="phoneinfo header-top__phoneinfo">
+                        <a class="phoneinfo__tel" href="tel:84996861762">8 (499) 686-17-62</a>
+                        <div class="phoneinfo__time">с 10.00 до 19.00 без выходных</div>
+                    </div>
+                </div>
             </div>
         </header>
     
 
-        <main class="main">
-            <article>
-                <section class="Headerbackgroung">
-                    <div class="header-bottom">
-                        <div class="titul">
-                            <h1>Создай свой образ вместе с нами</h1>
-                            <p>Идеальный образ за 60 минут</p>
-                            <button>Записаться онлайн</button>
-                        </div>
-        
-                        <div class="lady">
-                                <img src="/image/lady.svg" alt="Lady">
-                        </div>
-        
-                        <div class="socmedia">
-                            <ul>
-                                <li>
-                                    <a href="https://vk.com/" target="_blank"> 
-                                        <img class="socmedialogo" src="/image/vk.png" alt="VK">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.instagram.com/" target="_blank">
-                                        <img class="socmedialogo" src="/image/inst.png" alt="Inst">
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="https://www.youtube.com/" target="_blank">
-                                        <img class="socmedialogo" src="/image/youtube.png" alt="YT">
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
+        <main>
+            <section class="header-bottom">
+                <div class="header-bottom__container container">
+                    <div class="header-bottom__text">
+                        <h1 class="header-bottom__title">Создай свой образ вместе с нами</h1>
+                        <p class="header-bottom__subtitle">Идеальный образ за 60 минут</p>
+                        <button class="btn header-bottom__btn">Записаться онлайн</button>
                     </div>
-                </section>
-                
-                <section id="salon">
-                    <h2>О салоне</h2>
-
-                    <div class="salongroup">
-                        <div class="textsalon">
-                            <div>Мир красоты - это уютный салон в самом центре города. 
-                                Здесь работают профессиональные визажисты, стилисты и мастера татуажа</div>
-                            <p>Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
-                                а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. 
-                                Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – 
-                                вместе с Вами и для Вас.</p>
-                        </div>
-
-                        <div class="videosalon">
-                            <img src="/image/video.png" alt="video">
-                        </div>
+    
+                    <div class="header-bottom__lady">
+                            <img src="./image/lady.svg" alt="Lady">
                     </div>
-
-                    <div class="plus">
-                        <div>
-                            <img class="icon" src="/image/mirror.png">
-                            <h3>Удобные кабинеты</h3>
-                            <p>Комфорт и стиль - принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас</p>
+    
+                    <div class="header-bottom__socmedia socmedia">
+                        <ul class="socmedia__list">
+                            <li class="socmedia__item">
+                                <a href="https://vk.com/" target="_blank"> 
+                                    <img class="socmedia__logo" src="./image/vk.png" alt="VK">
+                                </a>
+                            </li>
+                            <li class="socmedia__item">
+                                <a href="https://www.instagram.com/" target="_blank">
+                                    <img class="socmedia__logo" src="./image/inst.png" alt="Inst">
+                                </a>
+                            </li>
+                            <li class="socmedia__item">
+                                <a href="https://www.youtube.com/" target="_blank">
+                                    <img class="socmedia__logo" src="./image/youtube.png" alt="YT">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section" id="salon">
+                <div class="container">
+                    <h2 class="section__title">О салоне</h2>
+                    <div class="section__inner inner">
+                        <div class="inner__about about">
+                            <div class="about__salontext text">
+                                <div class="text__title">Мир красоты - это уютный салон в самом центре города. 
+                                    Здесь работают профессиональные визажисты, стилисты и мастера татуажа</div>
+                                <p class="text__subtitle subtitle">Красота и хороший уход никогда не выходят из моды. Мы приглашаем Вас в место, где гармония обретает форму,
+                                    а внешность становится отражением внутреннего мира. Новая жизнь начинается с небольших изменений. 
+                                    Мы помогаем нашим клиентам воплотить их индивидуальность во внешнем облике. Мы создаем стиль – 
+                                    вместе с Вами и для Вас.</p>
+                            </div>
+                                   
+                            <div class="about__video">
+                                <img src="./image/video.png" alt="video">
+                            </div>
                         </div>
-
-                        <div>
-                            <img class="icon" src="/image/cream.png"> 
-                            <h3>Качественная косметика</h3>
-                            <p>Используем профессиональные материалы высшего качества лучших брендов</p>
-                        </div>
-
-                        <div>
-                            <img class="icon" src="/image/scissors.png">
-                            <h3>Опытные мастера</h3>
-                            <p>Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера</p>
+    
+                        <div class="inner__plus plus">
+                            <div class="plus__container">
+                                <img class="plus__icon" src="./image/mirror.png">
+                                <h3 class="plus__title title">Удобные кабинеты</h3>
+                                <p class="subtitle">Комфорт и стиль - принцип создания кабинетов салона красоты. Только эстетика и удобство для Вас</p>
+                            </div>
+        
+                            <div class="plus__container">
+                                <img class="plus__icon" src="./image/cream.png"> 
+                                <h3 class="plus__title title">Качественная косметика</h3>
+                                <p class="subtitle">Используем профессиональные материалы высшего качества лучших брендов</p>
+                            </div>
+        
+                            <div class="plus__container">
+                                <img class="plus__icon" src="./image/scissors.png">
+                                <h3 class="plus__title title">Опытные мастера</h3>
+                                <p class="subtitle">Работают только опытные мастера с чувством стиля. Смотрите наших специалистов в разделе Мастера</p>
+                            </div> 
+                            
                         </div> 
                     </div>
-                </section>
-            </article>
+                </div>  
+            </section> 
         </main>
 
-        <footer class="footer">
-            <div class="footerinfo">
-                <div>© 2020 «Море красоты»</div>
-                
-                <a href="">Политика конфиденциальности</a>  
-            </div>
+        <footer>
+            <div class="container">
+                <div class="footer">
+                    <div class="footer__info">
+                        <div class="footer__title">© 2020 «Море красоты»</div>
+                        
+                        <a class="footer__link" href="">Политика конфиденциальности</a>  
+                    </div>
 
-            <nav class="footernavigation">
-                <ul>
-                    <li><a href="#price">Услуги и цены</a></li>
-                    <li><a href="#master">Мастера</a></li>
-                    <li><a href="#work">Наши работы</a></li>
-                    <li><a href="#contact">Контакты</a></li>
-                </ul>
-            </nav>
+                    <nav class="navigation footer__navigation">
+                        <ul class="navigation__list navigation__list_font-weight">
+                            <li class="navigation__item"><a class="navigation__link" href="#prace">Услуги и цены</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#master">Мастера</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#work">Наши работы</a></li>
+                            <li class="navigation__item"><a class="navigation__link" href="#contact">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </footer>
     </div>
 </body>
