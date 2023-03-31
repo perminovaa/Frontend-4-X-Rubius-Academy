@@ -18,6 +18,9 @@ a {
     color: #278aff;
 }
 
+a:hover {
+    color: #00BF78;
+}
 
 .btn {
     border: none;
@@ -42,9 +45,28 @@ main {
 section:not(:first-child) {
     padding-top: 100px;
 }
+
 .container {
-    width: 1110px;
+    max-width: 1110px;
     margin: auto;
+}
+
+.title {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 22px;
+} 
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px 0;
+    font-size: 12px;
 }
 
 /*шапка*/
@@ -55,12 +77,12 @@ header {
     top: 0;
     z-index: 1;
 }
+
 .header-top {
     display: flex;
     align-items: baseline;
     justify-content: space-between;  
-    padding: 30px 0 10px 0;
-    
+    padding: 30px 0 10px 0;  
 }
 
 .logo {
@@ -130,13 +152,12 @@ header {
     line-height: 24px;
 }
 
-.header-bottom__btn {  /*ИСПРАВИТЬ КОГДА БУДЕТ БАЗОВАЯ КНОПКА */
+.header-bottom__btn { 
     margin-bottom: 136px;
     height: 48px;
     width: 203px;
     margin-left: 5px;
 }
-
 
 .header-bottom__btn:hover {
     transform: scale(1.05);
@@ -191,11 +212,12 @@ header {
 }
 
 /*О салоне*/
-.section_title {
+.section__title {
     font-size: 48px;
     font-weight: 700;
     margin: 0 0 32px;
 }
+
 .inner__about {
     display: flex;
     justify-content: space-between; 
@@ -255,10 +277,6 @@ header {
 }
 
 /*Преимущества*/
-.title {
-    font-size: 18px;
-    line-height: 22px;
-}
 
 .plus {
     display: flex;
@@ -270,37 +288,22 @@ header {
     flex-wrap: wrap;
 }
 
-.icon {
+.plus__icon {
     object-fit:contain;
     width: 48px;
     height: 48px; 
 }
 
-.plus div {
+.plus__container {
     width: 350px;
     height: auto;
 }
 
-.plus h3 {
+.plus__title {
     margin: 28px 0 12px;
 }
 
-.plus p {
-    font-size: 14px;
-    line-height: 22px;
-    margin: 0;
-}
-
-
 /*Подвал*/
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between; 
-    padding: 20px 0;
-    font-size: 12px;
-}
 
 .footer__title {
     margin-bottom: 8px;
@@ -309,10 +312,4 @@ header {
 .navigation__list_font-weight {
     font-weight: 400;
     font-size: 12px;
-}
-
-/*доп*/
-
-a:hover {
-    color: #00BF78;
 }
