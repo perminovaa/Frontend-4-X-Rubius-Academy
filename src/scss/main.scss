@@ -1,0 +1,397 @@
+@import 'libs';
+@import 'common';
+
+
+.section_backgr {
+    background-color: #F8F6F7;
+}
+
+.section_padbtn100 {
+    padding-bottom: 50px;
+}
+
+.title_mrgbtn8 {
+    margin-bottom: 8px;
+}
+
+.title_margin008 {
+    margin: 0 0 8px;
+}
+
+.subtitle_mrgbtn16 {
+    margin-bottom: 16px;
+}
+
+.subtitle_margin {
+    margin-bottom: 24px;
+}
+
+.title_font-weight500 {
+    font-weight: 500;
+}
+
+/*шапка*/
+
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-image: url(../image/fon.png);
+    background-color: #ffffff;
+}
+
+.header-top {
+    padding: 10px 0 10px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    
+    .logo {
+        font-size: 24px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 700;
+    }
+}
+
+.navigation {
+
+    &__list {
+        padding: 0;
+        max-width: 700px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        list-style: none;
+        font-size: 14px; 
+        font-weight: 500;
+    }
+
+    &__item {
+        margin: 5px 0 5px 0;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 28px;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: #333;
+    }
+}
+
+.phoneinfo {
+    text-align: right;
+
+    &__tel {
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+    &__time {
+        font-size: 11px;
+        margin-top: 8px;
+    }
+}
+
+/* превью */
+
+.header-bottom {
+    background-image: url(../image/fon.png);
+    background-size: cover;
+
+    &__container {
+        display: flex;
+        align-items: end;
+        justify-content: space-between; 
+        overflow: hidden;
+    }
+
+    &__title {
+        margin: 136px 0 17px;
+        font-size: 48px;
+        font-weight: 600;
+        line-height: 59px;
+    }
+
+    &__subtitle{
+        margin: 0 0 59px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    &__btn { 
+        margin-bottom: 136px;
+        height: 48px;
+        width: 203px;
+        margin-left: 5px;
+        font-size: 14px;
+    }
+
+    &__lady {
+        position: relative;
+        margin-right: 65px;
+
+        &:hover:before {
+            transform: scale(1.03);
+        }
+
+        &:before {
+            position: absolute;
+            bottom: -110px;
+            right: 0;
+            width: 472px;
+            height: 472px;
+            border-radius: 50%;
+            content: '';
+            background-color: #FB9475;
+            transition: .3s transform;
+        }
+
+        img {
+            position: relative;
+            width: 524px;
+            max-height: 100%;
+            margin-bottom: -5px; 
+        }
+    }
+
+    .socmedia {
+        margin-bottom: 234px;
+
+        &__logo {
+            width: 30px;
+            height: 30px;
+        }
+
+        &__list {
+            padding: 0;
+            list-style: none;
+        }
+
+        &__item {
+            height: 28px;
+            margin: 0 0 20px;
+        }
+    }
+}
+
+/*О салоне*/
+
+.inner__about {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+
+    .text {
+        width: 50%;
+
+        &__title {
+            font-size: 20px;
+            line-height: 32px;
+            margin-bottom: 16px;
+        }
+
+        &__subtitle {
+            font-size: 16px;
+            line-height: 26px;
+
+        }
+    }
+
+    .video {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+        img {
+            max-width: 445px;
+            max-height: 300px;
+            cursor: pointer; 
+            filter: brightness(80%);
+        }
+
+        &:before {
+            z-index: 1;
+            position: absolute;
+            margin-bottom: 25px;
+            content: url(../image/iconvideo.png);
+            transition: .3s transform;
+            cursor: pointer;
+        }
+
+        &:after {
+            z-index: 1;
+            margin-top: 73px;
+            content: 'Короткое видео о нас';
+            position: absolute;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 26px;
+            text-align: right;
+            color: white;
+            cursor: pointer;
+        }
+
+        &:hover:before {
+            transform: scale(1.1);
+        }
+    }
+}
+
+/*Преимущества*/
+
+.plus {
+    padding: 100px 0 0;
+    display: flex;
+    text-align: center;
+    justify-content:space-between; 
+    flex-wrap: wrap;
+    gap: 25px;
+    line-height: 22px;
+
+    &__icon {
+        width: 48px;
+        height: 48px; 
+    }
+
+    &__container {
+        width: 350px;
+        height: auto;
+    }
+
+    &__title {
+        margin: 28px 0 12px;
+    }
+}
+
+/* Популярные услуги */
+
+.inner{
+
+    .services {
+        display: flex;
+        justify-content: start; 
+        flex-wrap: wrap;
+        gap: 48px 30px;
+
+        &__container {
+        width: 350px;
+
+            img {
+                max-width: 350px;
+                height: 180px; 
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+/* Услуги и цены */
+
+.subtitle_link {
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+        text-decoration:underline;
+    }
+}
+
+.inner{
+    &__menu {
+        display: flex;
+        justify-content: start; 
+        flex-wrap: wrap;
+        gap: 0 28px;
+        margin-bottom: 50px;
+    }
+
+    .positions {
+        display: flex;
+        justify-content: space-between; 
+        gap: 35px 125px;
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+
+        .position {
+            display: flex;
+            justify-content: space-between; 
+            align-items: baseline;
+            width: 450px;
+
+            &__price {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24px; 
+                color: #00BF78;
+                width: 100px;
+                text-align: end;
+            }
+        }
+    }
+}
+
+/* Мастера */
+
+.inner__masters {
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    padding-bottom: 80px;
+    gap: 30px;
+
+    .master {
+
+        &__foto {
+            position: relative; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            
+            img {
+                max-width: 255px;
+                height: 300px;
+                margin-bottom: 20px;
+                
+                &:hover {
+                    filter: brightness(50%);
+
+                    /* ПРИ НАВЕДЕНИИ НАДПИСЬ ТОЖЕ ПОПАДАЕТ ПОД ФИЛЬТР, КАК СДЕЛАТЬ 
+                    ЕЕ СВЕРХУ И ЧТОБЫ УСЛОВИЕ НАВЕДЕНИЯ НА ИМГ СОХРАНЯЛОСЬ? */
+
+                }
+            }
+
+            &:hover:after {
+                width: 88px;
+                content: 'Записаться к мастеру';
+                position: absolute;
+                font-weight: 500;
+                font-size: 16px;
+                text-align: right;
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+/*Подвал*/
+
+.footer__title {
+    margin-bottom: 8px;
+}
+
+.navigation__list_font-weight {
+    font-weight: 400;
+    font-size: 12px;
+    justify-content: end;
+}
+
+
+@import 'media';
