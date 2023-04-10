@@ -1,0 +1,136 @@
+
+/* Large Devices, Wide Screens */ 
+@media only screen and (max-width: 1280px) { 
+    
+    .plus {
+        justify-content: center;
+    }
+    
+    .header-bottom {
+        &__lady {
+            img {
+                width: 400px;
+            }
+
+            &:before {
+                width: 400px;
+                height: 400px;
+            }
+        } 
+
+        &__btn {
+            margin-bottom: 50px;
+        }
+
+        .socmedia {
+            margin-bottom: 100px;
+        }
+    }
+} 
+
+@media only screen and (max-width: 1130px) { 
+    
+    .container {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .inner .positions,
+    .inner .services  {
+        justify-content: center;
+    }
+}
+
+/* Medium Devices, Desktops */ 
+@media only screen and (max-width: 992px) { 
+   
+    .section__title {
+        text-align: center;
+    } 
+
+    .inner__masters,   
+    .inner__about,
+    .inner__masters .master,
+    .inner__menu {
+        justify-content: center;
+    }
+
+    .navigation__list {
+        display: none;
+    }
+
+    .header-bottom {
+        
+        &__title {
+            margin-top: 70px;
+        }
+
+        &__lady {
+            img {
+                width: 300px;
+            } 
+
+            &:before {
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .inner {
+        .about {
+            gap: 15px;
+
+            &__salontext {
+                width: 100%;
+            }
+        }
+    }
+
+    .subtitle_margin {
+        text-align: center;
+    }
+} 
+
+/* Small Devices, Tablets */ 
+@media only screen and (max-width: 768px) {
+    
+    .header-bottom {
+        &__lady {
+            display: none;
+        }
+
+        .socmedia {
+            margin-bottom: 30px; 
+        }
+    }
+} 
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (max-width: 480px) { 
+
+    .header-top {
+        gap: 15px;
+    } 
+
+    .phoneinfo {
+        text-align: left;
+    }
+
+    .about__video img {
+        max-width: 350px;
+    }
+
+    .section__title {
+        font-size: 36px;
+    }
+}
+
+/* Custom, iPhone Retina */ 
+@media only screen and (max-width: 320px) { 
+
+}
