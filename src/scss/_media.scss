@@ -1,4 +1,13 @@
 
+
+@media only screen and (max-width: 1460px) {
+   
+    .container-work .sec-headder {
+        margin-left: 0;
+        justify-content: space-around;
+    }
+}
+
 /* Large Devices, Wide Screens */ 
 @media only screen and (max-width: 1280px) { 
     
@@ -35,8 +44,9 @@
         margin-right: 20px;
     }
 
-    .inner .positions,
-    .inner .services  {
+    .sec-prices .position-list, 
+    .sec-about .plus, 
+    .sec-services .service-field {
         justify-content: center;
     }
 }
@@ -44,14 +54,18 @@
 /* Medium Devices, Desktops */ 
 @media only screen and (max-width: 992px) { 
    
-    .section__title {
+    .header-top__burger { 
+        display:flex;
+    }
+
+    .sec-title,
+    .sec-masters__subtitle {
         text-align: center;
     } 
 
-    .inner__masters,   
-    .inner__about,
-    .inner__masters .master,
-    .inner__menu {
+    .sec-about .salontext,
+    .sec-masters .masters-field,
+    .sec-prices .categories {
         justify-content: center;
     }
 
@@ -76,23 +90,21 @@
             }
         }
     }
-
-    .burger {
-        display: flex;
+    
+    .sec-about .salontext__text {
+        width: 100%;
     }
 
-    .inner {
-        .about {
-            gap: 15px;
-
-            &__salontext {
-                width: 100%;
-            }
-        }
+    .sec-contacts__inner {
+        justify-content: center;
+        gap: 30px;
     }
-
-    .subtitle_margin {
-        text-align: center;
+    .sec-contacts__inner .contact {
+        order: 2;
+    }
+    .sec-contacts__form {
+        justify-content: center;
+        order: 1;
     }
 } 
 
@@ -117,7 +129,7 @@
         gap: 15px;
     } 
 
-    .phoneinfo {
+    .phoneinfo__tel {
         text-align: left;
     }
 
@@ -125,12 +137,8 @@
         max-width: 350px;
     }
 
-    .section__title {
+    .sec-title {
         font-size: 36px;
     }
-}
-
-/* Custom, iPhone Retina */ 
-@media only screen and (max-width: 320px) { 
 
 }

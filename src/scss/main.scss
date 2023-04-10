@@ -2,34 +2,6 @@
 @import 'common';
 
 
-.section_backgr {
-    background-color: #F8F6F7;
-}
-
-.section_padbtn100 {
-    padding-bottom: 50px;
-}
-
-.title_mrgbtn8 {
-    margin-bottom: 8px;
-}
-
-.title_margin008 {
-    margin: 0 0 8px;
-}
-
-.subtitle_mrgbtn16 {
-    margin-bottom: 16px;
-}
-
-.subtitle_margin {
-    margin-bottom: 24px;
-}
-
-.title_font-weight500 {
-    font-weight: 500;
-}
-
 /*шапка*/
 
 header {
@@ -38,20 +10,49 @@ header {
     top: 0;
     background-image: url(../image/fon.png);
     background-color: #ffffff;
-}
 
-.header-top {
-    padding: 10px 0 10px 0;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between; 
-    flex-wrap: wrap;
-    
-    .logo {
-        font-size: 24px;
-        text-decoration: none;
-        color: #333;
-        font-weight: 700;
+    .header-top {
+        padding: 10px 0 10px 0;
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+        
+        .logo {
+            font-size: 24px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 700;
+        }
+
+        &__burger {
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            min-width: 60px; 
+
+            img {
+                width: 60px; 
+                position: absolute;
+            }
+        }
+        
+        .phoneinfo {
+            text-align: right;
+        
+            &__tel {
+                font-size: 18px;
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+            }
+
+            &__time {
+                font-size: 11px;
+                margin-top: 8px;
+            }
+        }
     }
 }
 
@@ -66,6 +67,12 @@ header {
         list-style: none;
         font-size: 14px; 
         font-weight: 500;
+
+        &_end {
+            font-weight: 400;
+            font-size: 12px;
+            justify-content: end;
+        }
     }
 
     &__item {
@@ -79,21 +86,6 @@ header {
     &__link {
         text-decoration: none;
         color: #333;
-    }
-}
-
-.phoneinfo {
-    text-align: right;
-
-    &__tel {
-    font-size: 18px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
-    &__time {
-        font-size: 11px;
-        margin-top: 8px;
     }
 }
 
@@ -117,7 +109,7 @@ header {
         line-height: 59px;
     }
 
-    &__subtitle{
+    &__subtitle {
         margin: 0 0 59px;
         font-size: 20px;
         line-height: 24px;
@@ -158,36 +150,47 @@ header {
             margin-bottom: -5px; 
         }
     }
+}
 
-    .socmedia {
-        margin-bottom: 234px;
+.socmedia {
+    margin-bottom: 234px;
 
-        &__logo {
-            width: 30px;
-            height: 30px;
+    &__logo {
+        width: 30px;
+        height: 30px;
+    }
+
+    &__list {
+        padding: 0;
+        list-style: none;
+
+        &_horizontally {
+            display: flex;
+            align-items: baseline;
+            justify-content: flex-start; 
+            flex-wrap: wrap;
+            gap: 28px;
         }
+    }
 
-        &__list {
-            padding: 0;
-            list-style: none;
-        }
-
-        &__item {
-            height: 28px;
-            margin: 0 0 20px;
-        }
+    &__item {
+        height: 28px;
+        margin: 0 0 20px;
     }
 }
 
 /*О салоне*/
 
-.inner__about {
-    display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap;
+.sec-about {
 
-    .text {
-        width: 50%;
+    .salontext {
+        display: flex;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+
+        &__text {
+            width: 50%;
+        }
 
         &__title {
             font-size: 20px;
@@ -198,88 +201,86 @@ header {
         &__subtitle {
             font-size: 16px;
             line-height: 26px;
-
         }
-    }
 
-    .video {
-    position: relative; 
-    display: flex; 
-    align-items: center;
-    justify-content: center;
+        &__video {
+            position: relative; 
+            display: flex; 
+            align-items: center;
+            justify-content: center;
+            
+            img {
+                max-width: 445px;
+                max-height: 300px;
+                cursor: pointer; 
+                filter: brightness(80%);
+                max-width: 99%;
+            }
+
+            &:before {
+                z-index: 1;
+                position: absolute;
+                margin-bottom: 25px;
+                content: url(../image/iconvideo.png);
+                transition: .3s transform;
+                cursor: pointer;
+            }
+
+            &:after {
+                z-index: 1;
+                margin-top: 73px;
+                content: 'Короткое видео о нас';
+                position: absolute;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 26px;
+                text-align: right;
+                color: white;
+                cursor: pointer;
+            }
+
+            &:hover:before {
+                transform: scale(1.1);
+            }
+        }
+    } 
+
+    .plus {
+        padding: 100px 0 0;
+        display: flex;
+        text-align: center;
+        justify-content:space-between; 
+        flex-wrap: wrap;
+        gap: 25px;
+        line-height: 22px;
     
-        img {
-            max-width: 445px;
-            max-height: 300px;
-            cursor: pointer; 
-            filter: brightness(80%);
+        &__icon {
+            width: 48px;
+            height: 48px; 
         }
-
-        &:before {
-            z-index: 1;
-            position: absolute;
-            margin-bottom: 25px;
-            content: url(../image/iconvideo.png);
-            transition: .3s transform;
-            cursor: pointer;
+    
+        &__container {
+            width: 350px;
+            height: auto;
         }
-
-        &:after {
-            z-index: 1;
-            margin-top: 73px;
-            content: 'Короткое видео о нас';
-            position: absolute;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 26px;
-            text-align: right;
-            color: white;
-            cursor: pointer;
+    
+        &__title {
+            margin: 28px 0 12px;
         }
-
-        &:hover:before {
-            transform: scale(1.1);
-        }
-    }
-}
-
-/*Преимущества*/
-
-.plus {
-    padding: 100px 0 0;
-    display: flex;
-    text-align: center;
-    justify-content:space-between; 
-    flex-wrap: wrap;
-    gap: 25px;
-    line-height: 22px;
-
-    &__icon {
-        width: 48px;
-        height: 48px; 
-    }
-
-    &__container {
-        width: 350px;
-        height: auto;
-    }
-
-    &__title {
-        margin: 28px 0 12px;
     }
 }
 
 /* Популярные услуги */
 
-.inner{
+.sec-services {
 
-    .services {
+    .service-field {
         display: flex;
         justify-content: start; 
         flex-wrap: wrap;
         gap: 48px 30px;
 
-        &__container {
+        &__card {
         width: 350px;
 
             img {
@@ -288,30 +289,40 @@ header {
                 margin-bottom: 20px;
             }
         }
+
+        &__title {
+            margin-bottom: 8px;
+        }
+
+        &__subtitle {
+            margin-bottom: 16px;
+        }
     }
 }
 
 /* Услуги и цены */
 
-.subtitle_link {
-    text-decoration: none;
-    color: #333;
+.sec-prices {
 
-    &:hover {
-        text-decoration:underline;
-    }
-}
-
-.inner{
-    &__menu {
+    .categories {
         display: flex;
         justify-content: start; 
         flex-wrap: wrap;
-        gap: 0 28px;
+        gap: 10px 28px ;
         margin-bottom: 50px;
+
+        .subtitle_link {
+            text-decoration: none;
+            color: #333;
+
+            &:hover {
+                text-decoration:underline;
+                color:#00BF78 ;
+            }
+        }
     }
 
-    .positions {
+    .position-list {
         display: flex;
         justify-content: space-between; 
         gap: 35px 125px;
@@ -332,49 +343,255 @@ header {
                 width: 100px;
                 text-align: end;
             }
+
+            &__title {
+                margin: 0 0 8px;
+            }
         }
     }
 }
 
 /* Мастера */
 
-.inner__masters {
-    display: flex;
-    justify-content: space-between; 
-    flex-wrap: wrap;
-    padding-bottom: 80px;
-    gap: 30px;
+.sec-masters {
 
-    .master {
+    &__subtitle {
+        margin-bottom: 24px;
+        font-size: 16px;
+    }
 
-        &__foto {
-            position: relative; 
-            display: flex; 
-            align-items: center;
-            justify-content: center;
-            
-            img {
-                max-width: 255px;
-                height: 300px;
-                margin-bottom: 20px;
+    .masters-field {
+        display: flex;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+        padding-bottom: 80px;
+        gap: 30px;
+
+        &__title {
+            margin-bottom: 8px;
+        }
+        
+        &__subtitle {
+            margin-bottom: 16px;
+        }
+        
+        &__card {
+
+            .master-foto {
+                position: relative; 
+                display: flex; 
+                align-items: center;
+                justify-content: center;
                 
-                &:hover {
-                    filter: brightness(50%);
+                img {
+                    max-width: 255px;
+                    height: 300px;
+                    margin-bottom: 20px;
+                    object-fit:cover;
 
-                    /* ПРИ НАВЕДЕНИИ НАДПИСЬ ТОЖЕ ПОПАДАЕТ ПОД ФИЛЬТР, КАК СДЕЛАТЬ 
-                    ЕЕ СВЕРХУ И ЧТОБЫ УСЛОВИЕ НАВЕДЕНИЯ НА ИМГ СОХРАНЯЛОСЬ? */
+                    &:hover {
+                        filter: brightness(50%);
 
+                        /* ПРИ НАВЕДЕНИИ НАДПИСЬ ТОЖЕ ПОПАДАЕТ ПОД ФИЛЬТР, КАК СДЕЛАТЬ 
+                        ЕЕ СВЕРХУ И ЧТОБЫ УСЛОВИЕ НАВЕДЕНИЯ НА ИМГ СОХРАНЯЛОСЬ? */
+
+                    }
+                }
+
+                &:hover:after {
+                    width: 88px;
+                    content: 'Записаться к мастеру';
+                    position: absolute;
+                    font-weight: 500;
+                    font-size: 16px;
+                    text-align: right;
+                    color: rgb(255, 255, 255);
+                    cursor: pointer;
                 }
             }
+        }
+    }
+}
 
-            &:hover:after {
-                width: 88px;
-                content: 'Записаться к мастеру';
-                position: absolute;
-                font-weight: 500;
-                font-size: 16px;
-                text-align: right;
-                color: rgb(255, 255, 255);
+// Наши работы
+
+.container-work {
+    max-width: 1440px;
+
+    .sec-headder {
+        display: flex; 
+        align-items: start;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        max-width: 1110px;
+        margin-left: 165px;
+
+        .section__switch {
+            display: flex; 
+            align-items: start;
+            gap: 16px;
+
+            .click{
+                margin: 15px;
+                position: relative;
+
+                &:hover:before {
+                    position: absolute;
+                    cursor: pointer;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    content: '';
+                    background-color: #F8F6F7;
+                    transition: .3s transform;
+                    bottom: -8px;
+                    right: -10px;
+                }
+
+                img {
+                    position: relative;
+                    max-width: 19px;
+                    max-height: 19px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .sec-work__inner {
+    
+        .gallery {
+            display: flex; 
+            align-items: start;
+            justify-content: space-around;
+            gap: 30px;
+           
+
+            &__foto {
+                position: relative; 
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+            
+                .fotowork {
+                    width: 338px;
+                    height: 338px;
+                     object-fit:cover;
+                   
+                    &:hover {
+                        filter: brightness(50%);
+                        transform: scale(1.05);
+                        cursor: pointer;
+                    }
+                }
+        
+                &:hover:before {
+                    z-index: 1;
+                    position: absolute;
+                    margin-bottom: 25px;
+                    content: url(../image/workicon.png);
+                    transition: .3s transform;
+                    cursor: pointer;
+                }
+            
+                &:hover:after {
+                    z-index: 1;
+                    margin-top: 73px;
+                    content: 'Увеличить';
+                    position: absolute;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 26px;
+                    text-align: right;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .brends {
+            &__logo {
+                display: flex; 
+                align-items: center;
+                justify-content: center;
+                gap: 20px;
+                margin-bottom: 100px;
+                flex-wrap: wrap;
+                
+                img {
+                    filter: contrast(0);
+                        width: 160px;
+                        height: 61px;
+                }
+            }
+        }
+    }
+}
+
+// Контакты
+
+.sec-contacts {
+
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between; 
+        flex-wrap: wrap;
+
+        .contact {
+            padding-top: 30px;
+
+            &__text {
+                margin-bottom: 20px;
+            }
+
+            &__subtitle {
+                margin-bottom: 20px;
+                font-size: 14px;
+            }
+        }  
+    }
+
+    &__form {
+        display: flex;
+        align-items: baseline;
+        justify-content: start; 
+        width: 50%;
+
+        .form {
+            width: 445px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+            border-radius: 8px;
+            padding: 40px 35px;
+            background-color: white;
+
+            input {
+                margin-bottom: 10px;
+                width: 375px;
+                height: 48px;
+                border-color: #A0A0A0;
+                border-radius: 8px;
+                border-width: 1px;
+                padding: 16px;
+            }
+            
+            &__title {
+                margin-bottom: 15px;
+            }
+
+            &__subtitle {
+                margin-bottom: 35px;
+            }
+            
+            &__btn {
+                width: 375px;
+                height: 48px;
+                font-size: 14px;
+                margin-top: 20px;
+                margin-bottom: 16px;
+            }
+
+            .policy {
                 cursor: pointer;
             }
         }
@@ -383,14 +600,10 @@ header {
 
 /*Подвал*/
 
-.footer__title {
-    margin-bottom: 8px;
-}
-
-.navigation__list_font-weight {
-    font-weight: 400;
-    font-size: 12px;
-    justify-content: end;
+.footer {
+    &__title {
+        margin-bottom: 8px;
+    }
 }
 
 
