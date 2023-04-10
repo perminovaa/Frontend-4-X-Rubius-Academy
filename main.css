@@ -1,0 +1,330 @@
+html {
+    box-sizing: border-box;
+}
+
+*, 
+*:before, 
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    height: 100%;  
+    font-family: 'Montserrat';
+    color: #333;
+}
+
+a {
+    color: #278aff;
+}
+
+a:hover {
+    color: #00BF78;
+}
+
+.btn {
+    width: 112px;
+    height: 34px;
+    border: none;
+    color:#ffffff;
+    background-color: #FB9475;
+    transition: .3s transform;
+    border-radius: 24px;
+    cursor: pointer;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: auto;
+}
+
+section:not(:first-child) {
+    padding-top: 100px;
+}
+
+.container {
+    max-width: 1110px;
+    margin: auto;
+}
+
+.title {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.subtitle {
+    font-size: 14px;
+    line-height: 22px;
+} 
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px 0;
+    font-size: 12px;
+}
+
+/*шапка*/
+
+header {
+    z-index: 1;
+    position: sticky;
+    top: 0;
+    background-image: url(./image/fon.png);
+    background-color: #ffffff;
+}
+
+.header-top {
+    padding: 30px 0 10px 0;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;  
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+}
+
+.navigation__list {
+    padding: 0;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    font-size: 14px; 
+    font-weight: 500;
+}
+
+.navigation__item {
+    margin: 5px 0 5px 0;
+}
+
+.navigation__item:not(:last-child) {
+    margin-right: 28px;
+}
+
+.navigation__link {
+    text-decoration: none;
+    color: #333;
+}
+
+.phoneinfo {
+    text-align: right;
+}
+
+.phoneinfo__tel {
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.phoneinfo__time {
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+/* превью */
+
+.header-bottom {
+    background-image: url(./image/fon.png);
+    background-size: cover;
+}
+
+.header-bottom__container {
+    display: flex;
+    align-items: end;
+    justify-content: space-between; 
+    overflow: hidden;
+}
+
+.header-bottom__title {
+    margin: 136px 0 17px;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 59px;
+}
+
+.header-bottom__subtitle{
+    margin: 0 0 59px;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.header-bottom__btn { 
+    margin-bottom: 136px;
+    height: 48px;
+    width: 203px;
+    margin-left: 5px;
+}
+
+.header-bottom__btn:hover {
+    transform: scale(1.05);
+}
+
+.header-bottom__lady {
+    position: relative;
+    margin-right: 65px;
+}
+
+.header-bottom__lady img {
+    position: relative;
+    width: 524px;
+    max-height: 100%;
+    margin-bottom: -5px; 
+}
+
+.header-bottom__lady:hover:before {
+    transform: scale(1.03);
+}
+
+.header-bottom__lady:before {
+    position: absolute;
+    bottom: -110px;
+    right: 0;
+    width: 472px;
+    height: 472px;
+    border-radius: 50%;
+    content: '';
+    background-color: #FB9475;
+    transition: .3s transform;
+}
+
+.header-bottom__socmedia {
+   margin-bottom: 234px;
+}
+
+.socmedia__logo {
+    width: 30px;
+    height: 30px;
+    object-fit:contain;
+}
+
+.socmedia__list {
+    padding: 0;
+    list-style: none;
+}
+
+.socmedia__item {
+    height: 28px;
+    margin: 0 0 20px;
+}
+
+/*О салоне*/
+.section__title {
+    margin: 0 0 32px;
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.inner__about {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.about__salontext {
+    width: 50%;
+}
+
+.text__title {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.text__subtitle {
+    font-size: 16px;
+    line-height: 26px;
+}
+
+.about__video {
+    position: relative; 
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.about__video img {
+    width: 445px;
+    height: 300px;
+    object-fit:contain;
+    border-radius: 8px;
+    cursor: pointer; 
+    filter: brightness(80%);
+}
+
+.about__video:before {
+    z-index: 1;
+    position: absolute;
+    margin-bottom: 25px;
+    content: url(./image/iconvideo.png);
+    transition: .3s transform;
+    cursor: pointer;
+}
+
+.about__video:after {
+    z-index: 1;
+    margin-top: 73px;
+    content: 'Короткое видео о нас';
+    position: absolute;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: right;
+    color: white;
+    cursor: pointer;
+}
+
+.about__video:hover:before {
+    transform: scale(1.1);
+}
+
+/*Преимущества*/
+
+.plus {
+    padding: 100px 0 100px;  /* убрать нижний при добав. след. блока */ 
+    display: flex;
+    text-align: center;
+    justify-content:space-between; 
+    flex-wrap: wrap;
+    gap: 25px;
+    line-height: 22px;
+}
+
+.plus__icon {
+    width: 48px;
+    height: 48px; 
+    object-fit:contain;
+}
+
+.plus__container {
+    width: 350px;
+    height: auto;
+}
+
+.plus__title {
+    margin: 28px 0 12px;
+}
+
+/*Подвал*/
+
+.footer__title {
+    margin-bottom: 8px;
+}
+
+.navigation__list_font-weight {
+    font-weight: 400;
+    font-size: 12px;
+    justify-content: end;
+}
