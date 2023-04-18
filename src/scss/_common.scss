@@ -24,24 +24,27 @@ main {
     flex: auto;
 }
 
-.sec_grey {
-    background-color: #F8F6F7;
-}
-
-section:not(:first-child) {
-    padding-top: 100px;
-}
-
 .container {
     max-width: 1110px;
     margin: auto;
     overflow: hidden;
 }
 
-.sec-title {
-    margin: 0 0 32px;
-    font-size: 48px;
-    font-weight: 700;
+.section {
+
+    &-title {
+        margin: 0 0 32px;
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    &_grey {
+        background-color: #F8F6F7;
+    }
+}
+
+section:not(:first-child) {
+    padding-top: 100px;
 }
 
 .title {
@@ -73,10 +76,10 @@ section:not(:first-child) {
 
 a {
     color: #278aff;
-}
 
-a:hover {
-    color: #00BF78;
+    &:hover {
+        color: #00BF78;
+    }
 }
 
 .btn {
