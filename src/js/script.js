@@ -1,11 +1,11 @@
 
 // Галерея
+import 'slick-carousel/slick/slick';
+import $ from 'jquery';
 
-$(document).ready(function(){
-    $('.gallery').slick({
-      slidesToShow: 4,
+$('.gallery').slick({
+  slidesToShow: 4,
       slidesToScroll: 1,
-      // autoplay: true,
-      // autoplaySpeed: 2000,
-    });
+      autoplay: true,
+      autoplaySpeed: 2000,
 });
