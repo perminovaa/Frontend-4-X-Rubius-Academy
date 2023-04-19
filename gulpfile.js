@@ -48,10 +48,6 @@ function buildJs() {
 // Таск копирования статичных файлов
 function copy() {
     return src(['src/image/**/*.*'], { base: 'src' }).pipe(dest('dist'));
-    
-}
-function copySlink() {
-    return src(['src/slink/**/*.*'], { base: 'src' }).pipe(dest('dist'));
 }
 
 // Таск очистки dist
@@ -74,5 +70,5 @@ function createDevServer() {
     })
 }
 
-exports.build = series(cleanDist, parallel([buildSass, buildJs, buildHtml, copy, copySlink]));
+exports.build = series(cleanDist, parallel([buildSass, buildJs, buildHtml, copy]));
 exports.default = series(buildSass, buildJs, parallel(createDevServer, serve));

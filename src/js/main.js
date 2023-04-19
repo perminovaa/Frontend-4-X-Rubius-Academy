@@ -39,7 +39,8 @@ document.addEventListener('DOMContentLoaded', () => {       // после заг
 // Услуги и цены
 
 // открывает вкладку с услугами, соответствующую названию вкладки
-function openPosition(e, positionName) {                                  // функция приминает значения от tablinks
+openPosition = function openPosition(e, positionName) {    
+                          // функция приминает значения от tablinks
     // отключаем все вкладки
     let tabcontent = document.getElementsByClassName("position-list");      
     for (let i = 0; i < tabcontent.length; i++) {                           

@@ -1,2 +1,3 @@
+
+import './script';
 import './main';
-import './script.js'
