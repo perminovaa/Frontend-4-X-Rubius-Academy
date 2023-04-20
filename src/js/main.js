@@ -59,8 +59,8 @@ openPosition = function openPosition(e, positionName) {
 //   работа с формой в футере
 
 document.addEventListener('DOMContentLoaded', () => {                       // после загрузки окна
-
-    const form = document.getElementById('form');                           // находим форму
+    const form = document.getElementById('form'); 
+    const formDialog = document.getElementById('form_dialog');                // находим форму
     let modal = document.querySelector('.modal-alert');                     // находим модальное окно сообщения
         
     form.addEventListener('submit', function(e)  {                          // добавляем прослушиватель событий клик
@@ -70,8 +70,32 @@ document.addEventListener('DOMContentLoaded', () => {                       // �
 
         console.log ({                                                      // пишем в консоль коллекцию данных
             name: name.value,
-            phone: tel.value
+            phone: tel.value,
         })     
+
+        modal.classList.add('modal-alert_active');                          // задаем модальному окну сообщения активный стиль
+
+        setTimeout (() => {                                                 // закрывать модальное окно сообщения через 3 секунды
+            modal.classList.remove('modal-alert_active')
+        }, 3000);
+
+        this.reset();                                                       // очищаем форму
+    })
+
+    formDialog.addEventListener('submit', function(e)  {                          // добавляем прослушиватель событий клик
+        e.preventDefault();                                                 // отключаем поведение по умолчанию
+        
+        const { name, tel, mastersList, serviceList, visitDate } = this.elements;
+
+        let masterId = mastersList.value - 1;
+        console.log ({                                                      // пишем в консоль коллекцию данных
+            name: name.value,
+            phone: tel.value,
+            masterId: mastersList.value,
+            serviceId: serviceList[masterId].value,
+            visitDate: visitDate.value
+        })     
+
 
         modal.classList.add('modal-alert_active');                          // задаем модальному окну сообщения активный стиль
 
@@ -97,3 +121,17 @@ document.addEventListener('DOMContentLoaded', () => {                       // �
         }
     })
 })
+
+let select = document.getElementById('mastersList');
+let block = document.querySelectorAll('.block-position');
+let lastIndex = 0; // После каждой смены опции, сохраняем сюда индекс предыдущего блока
+
+select.addEventListener('change', function() {
+  block[lastIndex].style.display = "none"; 
+  // Чтобы сразу делать именно его невидимым при следующей смене 
+
+  let index = select.selectedIndex; // Определить индекс выбранной опции
+  block[index].style.display = "block"; // Показать блок с соответствующим индексом
+
+  lastIndex = index; // Обновить сохраненный индекс.
+});

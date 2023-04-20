@@ -30,6 +30,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "maskedinput": "^3.3.11",
     "normalize.css": "^8.0.1",
     "slick-carousel": "^1.8.1"
   }
