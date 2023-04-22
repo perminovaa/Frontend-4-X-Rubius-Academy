@@ -65,7 +65,7 @@
                         <div class="header-bottom__text">
                             <h1 class="header-bottom__title">Создай свой образ вместе с нами</h1>
                             <p class="header-bottom__subtitle">Идеальный образ за 60 минут</p>
-                            <button class="btn header-bottom__btn">Записаться онлайн</button>
+                            <button class="btn header-bottom__btn" data-fancybox data-src="#form_dialog">Записаться онлайн</button>
                         </div>
         
                         <div class="header-bottom__lady">
@@ -150,7 +150,7 @@
                                     <a href=""><img src="./image/services.png"></a>
                                     <h3 class="title service-field__title">Маникюр</h3>
                                     <p class="subtitle service-field__subtitle">Аппаратный, комбинированный или классический.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
@@ -158,21 +158,21 @@
                                     <h3 class="title service-field__title">Покрытие гель-лак</h3>
                                     <p class="subtitle service-field__subtitle">Гель-лак наносится в несколько слоев с использование базы и топа. 
                                                         Каждый слой полимеризуется в LED-лампе.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
                                     <a href=""><img src="./image/services.png"></a>
                                     <h3 class="title service-field__title">Бразильский маникюр</h3>
                                     <p class="subtitle service-field__subtitle">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
                                     <a href=""><img src="./image/services.png"></a>
                                     <h3 class="title service-field__title">Педикюр</h3>
                                     <p class="subtitle service-field__subtitle">Аппаратный, комбинированный или классический.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
@@ -180,7 +180,7 @@
                                     <h3 class="title service-field__title">Парафинотерапия</h3>
                                     <p class="subtitle service-field__subtitle">Благодаря этой процедуре увлажнение кожи увеличивается на 80%, 
                                                         также выводит токсины и укрепляет суставы.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
                             </div>
                         </div> 
@@ -653,28 +653,28 @@
                         <div class="section-masters__inner">
                             <div class="masters-field">
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img src="./image/irina.png"></a>
+                                    <a class="master-foto" href=""><img src="./image/irina.png" data-fancybox data-src="#form_dialog"></a>
                                     <h3 class="title masters-field__title">Краснова Ирина</h3>
                                     <p class="subtitle masters-field__subtitle">Мастер ногтевого сервиса</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
                                 </div>
 
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img src="./image/Janna.png"></a>
+                                    <a class="master-foto" href="" data-fancybox data-src="#form_dialog"><img src="./image/Janna.png"></a>
                                     <h3 class="title masters-field__title">Калилова Жанна</h3>
                                     <p class="subtitle masters-field__subtitle">Визажист-стилист</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
                                 </div>
 
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img  src="./image/alina.png"></a>
+                                    <a class="master-foto" href="" data-fancybox data-src="#form_dialog"><img  src="./image/alina.png"></a>
                                     <h3 class="title masters-field__title">Киселева Алина</h3>
                                     <p class="subtitle masters-field__subtitle">Парикмахер</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
                                 </div>
 
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img src="./image/elena.png"></a>
+                                    <a class="master-foto" href="" data-fancybox data-src="#form_dialog"><img src="./image/elena.png"></a>
                                     <h3 class="title masters-field__title">Иванова Елена</h3>
                                     <p class="subtitle masters-field__subtitle">Мастер ногтевого сервиса</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
@@ -763,78 +763,94 @@
                                                         уточнит подробности и согласует время.
                                     </p>
                                     <input type="name" name="name" placeholder="Ваше имя" required>
-                                    <input id="phone" type="tel" name="tel" required>
+                                    <input class= "phone" id="phone" type="tel" name="tel" placeholder="+7(___) ___ __-__" required>
                                     <button class="btn form__btn" type="submit"> Записаться</button>
                                     <p class="subtitle subtitle_small">Нажимая на кнопку вы соглашаетесь с <a class="policy">обработкой персональных данных</a></p>
                                 </form>
                             </div> 
-                            <div class="dialog-content">
-                                <form class="form form_dialog" id="form_dialog">
-                                    <input type="name" name="name" placeholder="Ваше имя" required>
-                                    <input type="tel" name="tel" id="phone"  required>
-                                    <label for="masters-list">Выберите мастера:</label>
-                                    <select name="mastersList" id="mastersList">
-                                        <option value="1">Краснова Ирина</option>
-                                        <option value="2">Калилова Жанна</option>
-                                        <option value="3">Киселева Алина</option>
-                                        <option value="4">Иванова Елена</option>
-                                        <option value="" selected> </option>
-                                    </select>
-                                    
-                                    <div class="block-position">
-                                        <label for= "block-position__position">Выберите услугу:</label>
-                                    <select class="block-position__position" name="serviceList" id="serviceList">
-                                        <option value="1-1">Аппаратный маникюр</option>
-                                        <option value="1-2">Комбинированный маникюр</option>
-                                        <option value="1-3">Покрытие гель-лак</option>
-                                        <option value="1-4">Ремонт ногтя</option>
-                                    </select>
-                                    </div>
-                                    
-                                    <div class="block-position">
-                                        <label for= "block-position__position">Выберите услугу:</label>
-                                    <select class="block-position__position" name="serviceList" id="serviceList">
-                                        <option value="2-1">Вечерний Макияж</option>
-                                        <option value="2-2">Свадебный макияж</option>
-                                        <option value="2-3">Эффектный макияж</option>
-                                        <option value="2-4">Лёгкий макияж</option>
-                                    </select>
-                                    </div>
-                                    
-                                    <div class="block-position">
-                                    <label for= "block-position__position">Выберите услугу:</label>
-                                    <select class="block-position__position" name="serviceList" id="serviceList">
-                                        <option value="3-1">Женская стрижка</option>
-                                        <option value="3-2">Мужская стрижка</option>
-                                        <option value="3-3">Стрижка бороды и усов</option>
-                                        <option value="3-4">Экспресс укладка</option>
-                                    </select>
-                                    </div>
-                                    
-                                    <div class="block-position">
-                                        <label for= "block-position__position">Выберите услугу:</label>
-                                    <select class="block-position__position" name="serviceList" id="serviceList">
-                                        <option value="4-1">Аппаратный педикюр</option>
-                                        <option value="4-2">Комбинированный педикюр</option>
-                                        <option value="4-3">Бразильский маникюр</option>
-                                        <option value="4-4">Слайдер</option>
-                                    </select>
-                                    </div>
-                                    <label for="date">Выберите дату:</label>
-                                    <input type="date" id="date" name="visitDate" id="visitDate">
+                        </div>
 
-                                    <button class="btn form__btn" type="submit"> Записаться</button>
-                                    <p class="subtitle subtitle_small">Нажимая на кнопку вы соглашаетесь с <a class="policy">обработкой персональных данных</a></p>
-                                    
-                                </form>
-                            </div>
+                        <div class="modal-alert modal-alert_position" id="modal-alert">
+                            <p class="modal-alert__text">Ваша заявка отправлена!</p>
+                            <p class="modal-alert__text">В ближайшее время с вами свяжется менеджер.</p>
+                            <button class="btn modal-alert-close">Закрыть</button>
                         </div>
                     </div>
-                    <div class="modal-alert">
-                        <p class="modal-alert__text">Спасибо! Менеджер свяжется с Вами в ближайшее время</p>
-                        <button class="btn modal-alert-close">Закрыть</button>
-                    </div>
                 </section> 
+                
+                
+                    <div class="dialog-content">
+                        <form class="form form_dialog" id="form_dialog">
+                            <h3 class="title form__title">Записаться на услугу</h3>
+                            <p class="subtitle form__subtitle">Наш менеджер перезвонит в течение нескольких минут, 
+                                уточнит подробности и согласует время.</p>    
+                            <input type="name" name="name" placeholder="Ваше имя" required>
+                            <input type="tel" name="tel" id="phone" class="phone" placeholder="+7(___) ___ __-__" required>
+                            <label for="masters-list"  class="subtitle form__subtitle">Выберите мастера:</label>
+                            <select name="mastersList" id="mastersList">
+                                <option value="1" class="subtitle">Краснова Ирина</option>
+                                <option value="2" class="subtitle">Калилова Жанна</option>
+                                <option value="3" class="subtitle">Киселева Алина</option>
+                                <option value="4" class="subtitle">Иванова Елена</option>
+                                <option value="" selected> </option>
+                            </select>
+                            
+                            <div class="block-position">
+                                <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
+                            <select class="block-position__position" name="serviceList" id="serviceList">
+                                <option value="1-1" class="subtitle">Аппаратный маникюр</option>
+                                <option value="1-2" class="subtitle">Комбинированный маникюр</option>
+                                <option value="1-3" class="subtitle">Покрытие гель-лак</option>
+                                <option value="1-4" class="subtitle">Ремонт ногтя</option>
+                                <option value="" selected> </option>
+                            </select>
+                            </div>
+                            
+                            <div class="block-position">
+                                <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
+                            <select class="block-position__position" name="serviceList" id="serviceList">
+                                <option value="2-1" class="subtitle">Вечерний Макияж</option>
+                                <option value="2-2" class="subtitle">Свадебный макияж</option>
+                                <option value="2-3" class="subtitle">Эффектный макияж</option>
+                                <option value="2-4" class="subtitle">Лёгкий макияж</option>
+                                <option value="" selected> </option>
+                            </select>
+                            </div>
+                            
+                            <div class="block-position">
+                            <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
+                            <select class="block-position__position" name="serviceList" id="serviceList">
+                                <option value="3-1" class="subtitle">Женская стрижка</option>
+                                <option value="3-2" class="subtitle">Мужская стрижка</option>
+                                <option value="3-3" class="subtitle">Стрижка бороды и усов</option>
+                                <option value="3-4" class="subtitle">Экспресс укладка</option>
+                                <option value="" selected> </option>
+                            </select>
+                            </div>
+                            
+                            <div class="block-position">
+                                <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
+                            <select class="block-position__position" name="serviceList" id="serviceList">
+                                <option value="4-1" class="subtitle">Аппаратный педикюр</option>
+                                <option value="4-2" class="subtitle">Комбинированный педикюр</option>
+                                <option value="4-3" class="subtitle">Бразильский маникюр</option>
+                                <option value="4-4" class="subtitle">Слайдер</option>
+                                <option value="" selected> </option>
+                            </select>
+                            </div>
+                            <label for="date"  class="subtitle form__subtitle">Выберите дату:</label>
+                            <input type="date" id="date" name="visitDate" id="visitDate" class="subtitle">
+
+                            <button class="btn form__btn" type="submit"> Записаться</button>
+                            <p class="subtitle subtitle_small">Нажимая на кнопку вы соглашаетесь с <a class="policy">обработкой персональных данных</a></p>
+                        </form>
+                    </div>
+
+                     <div class="modal-alert modal-alert" id="modal-alert-dialog">
+                            <p class="modal-alert__text">Ваша заявка отправлена!</p>
+                            <p class="modal-alert__text">В ближайшее время с вами свяжется менеджер.</p>
+                        </div>
+                
             </main>
 
             <footer>
@@ -863,7 +879,8 @@
         <script
             src="https://code.jquery.com/jquery-3.6.4.min.js"
             integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-            crossorigin="anonymous"></script>
+            crossorigin="anonymous">
+        </script>
 
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
 

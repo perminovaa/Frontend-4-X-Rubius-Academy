@@ -612,73 +612,82 @@ header {
         align-items: baseline;
         justify-content: start; 
         width: 50%;
+    }
+}
 
-        .form {
-            width: 445px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
-            border-radius: 8px;
-            padding: 40px 35px;
-            background-color: white;
+.modal-alert {
+    width: 330px;
+    height: auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 50px rgba(74, 74, 74, 0.5);
+    border-radius: 8px;
+    text-align: center;
+    display: none;
 
-            input {
-                margin-bottom: 10px;
-                width: 375px;
-                height: 48px;
-                border-color: #A0A0A0;
-                border-radius: 8px;
-                border-width: 1px;
-                padding: 16px;
-            }
-            
-            &__title {
-                margin-bottom: 15px;
-            }
-
-            &__subtitle {
-                margin-bottom: 35px;
-            }
-            
-            &__btn {
-                width: 375px;
-                height: 48px;
-                font-size: 14px;
-                margin-top: 20px;
-                margin-bottom: 16px;
-            }
-
-            .policy {
-                cursor: pointer;
-            }
-        }
+    &__text {
+        margin-bottom: 20px;
     }
 
-    .modal-alert {
+    &_active {
+        display: inline;
+    }
+
+    &_position {
         position: fixed;
         top: 50%;
         left: 50%;
         margin-top: -75px;
         margin-left: -150px;
-        width: 300px;
-        height: 150px;
-        padding: 10px;
-        background-color: #ffffff;
-        box-shadow: 0px 0px 50px rgba(74, 74, 74, 0.5);
+    }
+}
+
+.block-position {
+    display: none;
+}
+
+.form {
+    width: 445px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 40px 35px;
+    background-color: white;
+
+    input,
+    select {
+        margin-bottom: 10px;
+        width: 370px;
+        height: 54px;
+        border-color: #A0A0A0;
         border-radius: 8px;
-        text-align: center;
-        visibility: hidden;
-    
-        &__text {
-            margin-bottom: 20px;
-        }
+        border-width: 1px;
+        padding: 16px;
+    }
+
+    &__title {
+        margin-bottom: 15px;
+    }
+
+    &__subtitle {
+        margin-bottom: 35px;
     }
     
-    .modal-alert_active {
-        visibility: visible;
+    &__btn {
+        width: 375px;
+        height: 48px;
+        font-size: 14px;
+        margin-top: 20px;
+        margin-bottom: 16px;
     }
-    
-    .block-position {
-        display: none;
-    }
+
+    .policy {
+        cursor: pointer;
+    } 
+}
+
+.dialog-content {
+    display: none;
+
 }
 
 /*Подвал*/

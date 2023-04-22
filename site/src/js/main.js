@@ -60,7 +60,7 @@ openPosition = function openPosition(e, positionName) {
 
 document.addEventListener('DOMContentLoaded', () => {                       // после загрузки окна
     const form = document.getElementById('form'); 
-    const formDialog = document.getElementById('form_dialog');                // находим форму
+    const formDialog = document.getElementById('form_dialog');              // находим форму
     let modal = document.querySelector('.modal-alert');                     // находим модальное окно сообщения
         
     form.addEventListener('submit', function(e)  {                          // добавляем прослушиватель событий клик
@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {                       // �
             masterId: mastersList.value,
             serviceId: serviceList[masterId].value,
             visitDate: visitDate.value
-        })     
-
+        })    
+        $.fancybox.close();                                                 // закрываем модальное окно
 
         modal.classList.add('modal-alert_active');                          // задаем модальному окну сообщения активный стиль
 
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {                       // �
             modal.classList.remove('modal-alert_active')
         }, 3000);
 
-        this.reset();                                                       // очищаем форму
+        this.reset();                                                           // очищаем форму
     })
 
     let buttonModalAlert = document.querySelector('.modal-alert-close');        // находим кнопку в модальном окне сообщения
