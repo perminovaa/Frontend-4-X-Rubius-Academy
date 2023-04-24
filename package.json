@@ -4,24 +4,33 @@
   "description": "Перминова Анастасия Александровна",
   "main": "index.js",
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build"
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
     "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
     "browser-sync": "^2.29.1",
+    "cross-env": "^7.0.3",
     "cssnano": "^6.0.0",
     "gulp": "^4.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
     "postcss": "^8.4.21",
-    "sass": "^1.60.0"
+    "sass": "^1.60.0",
+    "webpack": "^5.79.0",
+    "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
   }
 }

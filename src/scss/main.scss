@@ -1,8 +1,41 @@
 @import 'libs';
 @import 'common';
-
+@import 'slick-carousel/slick/slick';
 
 /*шапка*/
+
+.container-menu {
+    width: 70%;
+    height: 100%;
+    padding: 100px 40px 30px;
+    background-color:#ffffff;
+    position: fixed;
+    overflow: scroll;
+    box-shadow: 0px 0px 100px rgba(0, 0, 0, 0.3);
+    visibility: hidden;
+    transition: visibility 0s 0.2s, opacity 0.6s ease;
+    opacity: 0;
+
+    .navigation__list_vertical-list {
+        display: list-item;
+        padding-top: 40px;
+
+        .navigation__item {
+            margin-bottom: 30px;
+        }
+    }
+
+    .menumodile__phoneinfo {
+        margin-top: 60px;
+        text-align: left;
+    }
+}
+
+.container-menu_active {
+    transition: visibility 0s 0s, opacity 0.2s ease;
+    opacity: 1;
+    visibility: visible;
+}
 
 header {
     z-index: 1;
@@ -17,43 +50,33 @@ header {
         align-items: baseline;
         justify-content: space-between; 
         flex-wrap: wrap;
-        
-        .logo {
-            font-size: 24px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 700;
-        }
 
-        &__burger {
+        .burger {
             display: none;
             align-items: center;
             justify-content: center;
             position: relative;
-            min-width: 60px; 
-
-            img {
-                width: 60px; 
-                position: absolute;
+            width: 50px; 
+            height: 50px;
+            background-image: url(../image/menu.png);
+            background-color: #ffffff;
+            background-size: contain;
+            border: none; 
+            outline: none;
+            
+            &_close {
+                background-image: url(../image/cancel.png);
             }
-        }
-        
-        .phoneinfo {
-            text-align: right;
-        
-            &__tel {
-                font-size: 18px;
-                text-decoration: none;
-                color: #333;
-                font-weight: 500;
-            }
-
-            &__time {
-                font-size: 11px;
-                margin-top: 8px;
-            }
+            
         }
     }
+}
+
+.logo {
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
 }
 
 .navigation {
@@ -86,6 +109,22 @@ header {
     &__link {
         text-decoration: none;
         color: #333;
+    }
+}
+
+.phoneinfo {
+    text-align: right;
+
+    &__tel {
+        font-size: 18px;
+        text-decoration: none;
+        color: #333;
+        font-weight: 500;
+    }
+
+    &__time {
+        font-size: 11px;
+        margin-top: 8px;
     }
 }
 
@@ -181,7 +220,7 @@ header {
 
 /*О салоне*/
 
-.sec-about {
+.section-about {
 
     .salontext {
         display: flex;
@@ -224,6 +263,7 @@ header {
                 content: url(../image/iconvideo.png);
                 transition: .3s transform;
                 cursor: pointer;
+                pointer-events: none;
             }
 
             &:after {
@@ -237,6 +277,7 @@ header {
                 text-align: right;
                 color: white;
                 cursor: pointer;
+                pointer-events: none;
             }
 
             &:hover:before {
@@ -272,7 +313,7 @@ header {
 
 /* Популярные услуги */
 
-.sec-services {
+.section-services {
 
     .service-field {
         display: flex;
@@ -282,6 +323,7 @@ header {
 
         &__card {
         width: 350px;
+        padding: 10px;
 
             img {
                 max-width: 350px;
@@ -302,7 +344,7 @@ header {
 
 /* Услуги и цены */
 
-.sec-prices {
+.section-prices {
 
     .categories {
         display: flex;
@@ -311,23 +353,35 @@ header {
         gap: 10px 28px ;
         margin-bottom: 50px;
 
+        .tablinks {
+            border: none; 
+            outline: none;
+            background: none;
+        };
+
+        .tablinks.active {
+            color:#00BF78;
+            text-decoration:underline;
+        }
+
         .subtitle_link {
             text-decoration: none;
             color: #333;
 
             &:hover {
                 text-decoration:underline;
-                color:#00BF78 ;
+                color:#00BF78;
             }
         }
     }
-
+    
     .position-list {
-        display: flex;
+        
         justify-content: space-between; 
         gap: 35px 125px;
         flex-wrap: wrap;
         padding-bottom: 30px;
+        display: none;
 
         .position {
             display: flex;
@@ -349,11 +403,15 @@ header {
             }
         }
     }
+
+    .position-list_active {
+        display: flex;
+    }
 }
 
 /* Мастера */
 
-.sec-masters {
+.section-masters {
 
     &__subtitle {
         margin-bottom: 24px;
@@ -391,10 +449,6 @@ header {
 
                     &:hover {
                         filter: brightness(50%);
-
-                        /* ПРИ НАВЕДЕНИИ НАДПИСЬ ТОЖЕ ПОПАДАЕТ ПОД ФИЛЬТР, КАК СДЕЛАТЬ 
-                        ЕЕ СВЕРХУ И ЧТОБЫ УСЛОВИЕ НАВЕДЕНИЯ НА ИМГ СОХРАНЯЛОСЬ? */
-
                     }
                 }
 
@@ -407,6 +461,7 @@ header {
                     text-align: right;
                     color: rgb(255, 255, 255);
                     cursor: pointer;
+                    pointer-events: none;
                 }
             }
         }
@@ -415,69 +470,63 @@ header {
 
 // Наши работы
 
+.slick-prev,
+.slick-next {
+    position: absolute;
+    height: 15px;
+    width: 20px;
+    cursor: pointer;
+    color: transparent;
+    top: -60px;
+    border: none; 
+    outline: none;
+    background: none;
+    
+    &:hover::after {
+        position: absolute;
+        cursor: pointer;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        content: '';
+        background-color: #F8F6F7;
+        transition: .3s transform;
+        bottom: -13px;
+        right: -10px;
+        z-index: -1;
+    }
+}
+
+.slick-prev {
+    left: 80%;
+    background-image: url(../image/clickleft.png);
+}
+
+.slick-next {
+    left: 85%;
+    background-image: url(../image/clickright.png);
+}
+
 .container-work {
     max-width: 1440px;
+    overflow: visible;
 
-    .sec-headder {
-        display: flex; 
-        align-items: start;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        max-width: 1110px;
-        margin-left: 165px;
-
-        .section__switch {
-            display: flex; 
-            align-items: start;
-            gap: 16px;
-
-            .click{
-                margin: 15px;
-                position: relative;
-
-                &:hover:before {
-                    position: absolute;
-                    cursor: pointer;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    content: '';
-                    background-color: #F8F6F7;
-                    transition: .3s transform;
-                    bottom: -8px;
-                    right: -10px;
-                }
-
-                img {
-                    position: relative;
-                    max-width: 19px;
-                    max-height: 19px;
-                    cursor: pointer;
-                }
-            }
-        }
-    }
-
-    .sec-work__inner {
+    .section-work__inner {
     
         .gallery {
-            display: flex; 
-            align-items: start;
-            justify-content: space-around;
-            gap: 30px;
            
-
             &__foto {
                 position: relative; 
                 display: flex; 
                 align-items: center;
                 justify-content: center;
-            
+                height: 360px;
+        
                 .fotowork {
-                    width: 338px;
-                    height: 338px;
-                     object-fit:cover;
-                   
+                    width: 340px;
+                    height: 340px;
+                    object-fit:cover;
+                
                     &:hover {
                         filter: brightness(50%);
                         transform: scale(1.05);
@@ -492,6 +541,7 @@ header {
                     content: url(../image/workicon.png);
                     transition: .3s transform;
                     cursor: pointer;
+                    pointer-events: none;
                 }
             
                 &:hover:after {
@@ -505,8 +555,12 @@ header {
                     text-align: right;
                     color: white;
                     cursor: pointer;
+                    pointer-events: none;
                 }
             }
+        }
+        .slick-dots {
+            display: none;
         }
 
         .brends {
@@ -530,7 +584,7 @@ header {
 
 // Контакты
 
-.sec-contacts {
+.section-contacts {
 
     &__inner {
         display: flex;
@@ -540,6 +594,7 @@ header {
 
         .contact {
             padding-top: 30px;
+            width: 50%;
 
             &__text {
                 margin-bottom: 20px;
@@ -595,6 +650,30 @@ header {
                 cursor: pointer;
             }
         }
+    }
+
+    .modal-alert {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        margin-top: -75px;
+        margin-left: -150px;
+        width: 300px;
+        height: 150px;
+        padding: 10px;
+        background-color: #ffffff;
+        box-shadow: 0px 0px 50px rgba(74, 74, 74, 0.5);
+        border-radius: 8px;
+        text-align: center;
+        visibility: hidden;
+    
+        &__text {
+            margin-bottom: 20px;
+        }
+    }
+    
+    .modal-alert_active {
+        visibility: visible;
     }
 }
 
