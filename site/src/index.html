@@ -762,8 +762,8 @@
                                     <p class="subtitle form__subtitle">Наш менеджер перезвонит в течение нескольких минут, 
                                                         уточнит подробности и согласует время.
                                     </p>
-                                    <input type="name" name="name" placeholder="Ваше имя" required>
-                                    <input class= "phone" id="phone" type="tel" name="tel" placeholder="+7(___) ___ __-__" required>
+                                    <input class="_req" type="name" name="name" placeholder="Ваше имя" >
+                                    <input class= "phone _req" id="phone" type="tel" name="tel" placeholder="+7(___) ___ __-__" >
                                     <button class="btn form__btn" type="submit"> Записаться</button>
                                     <p class="subtitle subtitle_small">Нажимая на кнопку вы соглашаетесь с <a class="policy">обработкой персональных данных</a></p>
                                 </form>
@@ -780,64 +780,24 @@
                 
                 
                     <div class="dialog-content">
-                        <form class="form form_dialog" id="form_dialog">
+                        <form class="form" id="form_dialog">
                             <h3 class="title form__title">Записаться на услугу</h3>
                             <p class="subtitle form__subtitle">Наш менеджер перезвонит в течение нескольких минут, 
                                 уточнит подробности и согласует время.</p>    
-                            <input type="name" name="name" placeholder="Ваше имя" required>
-                            <input type="tel" name="tel" id="phone" class="phone" placeholder="+7(___) ___ __-__" required>
-                            <label for="masters-list"  class="subtitle form__subtitle">Выберите мастера:</label>
-                            <select name="mastersList" id="mastersList">
-                                <option value="1" class="subtitle">Краснова Ирина</option>
-                                <option value="2" class="subtitle">Калилова Жанна</option>
-                                <option value="3" class="subtitle">Киселева Алина</option>
-                                <option value="4" class="subtitle">Иванова Елена</option>
-                                <option value="" selected> </option>
+                            <input class="_reqD" type="name" name="name" placeholder="Ваше имя">
+                            <input class="phone _reqD" type="tel" name="tel" id="phone"  placeholder="+7(___) ___ __-__">
+                            <label for="mastersList"  class="subtitle form__subtitle">Выберите мастера:</label>
+                            <select name="mastersList" class="mastersList">
+                                <!-- option из бэкенда -->
                             </select>
                             
                             <div class="block-position">
-                                <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
-                            <select class="block-position__position" name="serviceList" id="serviceList">
-                                <option value="1-1" class="subtitle">Аппаратный маникюр</option>
-                                <option value="1-2" class="subtitle">Комбинированный маникюр</option>
-                                <option value="1-3" class="subtitle">Покрытие гель-лак</option>
-                                <option value="1-4" class="subtitle">Ремонт ногтя</option>
-                                <option value="" selected> </option>
-                            </select>
+                                <label for= "serviceList"  class="subtitle form__subtitle">Выберите услугу:</label>
+                                <select class="serviceList" name="serviceList">
+                                    <!-- option из бэкенда -->
+                                </select>
                             </div>
-                            
-                            <div class="block-position">
-                                <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
-                            <select class="block-position__position" name="serviceList" id="serviceList">
-                                <option value="2-1" class="subtitle">Вечерний Макияж</option>
-                                <option value="2-2" class="subtitle">Свадебный макияж</option>
-                                <option value="2-3" class="subtitle">Эффектный макияж</option>
-                                <option value="2-4" class="subtitle">Лёгкий макияж</option>
-                                <option value="" selected> </option>
-                            </select>
-                            </div>
-                            
-                            <div class="block-position">
-                            <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
-                            <select class="block-position__position" name="serviceList" id="serviceList">
-                                <option value="3-1" class="subtitle">Женская стрижка</option>
-                                <option value="3-2" class="subtitle">Мужская стрижка</option>
-                                <option value="3-3" class="subtitle">Стрижка бороды и усов</option>
-                                <option value="3-4" class="subtitle">Экспресс укладка</option>
-                                <option value="" selected> </option>
-                            </select>
-                            </div>
-                            
-                            <div class="block-position">
-                                <label for= "block-position__position"  class="subtitle form__subtitle">Выберите услугу:</label>
-                            <select class="block-position__position" name="serviceList" id="serviceList">
-                                <option value="4-1" class="subtitle">Аппаратный педикюр</option>
-                                <option value="4-2" class="subtitle">Комбинированный педикюр</option>
-                                <option value="4-3" class="subtitle">Бразильский маникюр</option>
-                                <option value="4-4" class="subtitle">Слайдер</option>
-                                <option value="" selected> </option>
-                            </select>
-                            </div>
+
                             <label for="date"  class="subtitle form__subtitle">Выберите дату:</label>
                             <input type="date" id="date" name="visitDate" id="visitDate" class="subtitle">
 
@@ -845,11 +805,12 @@
                             <p class="subtitle subtitle_small">Нажимая на кнопку вы соглашаетесь с <a class="policy">обработкой персональных данных</a></p>
                         </form>
                     </div>
+                    <div class="loading"><img src="./image/loading-gif-orange.gif"></div>
 
-                     <div class="modal-alert modal-alert" id="modal-alert-dialog">
-                            <p class="modal-alert__text">Ваша заявка отправлена!</p>
-                            <p class="modal-alert__text">В ближайшее время с вами свяжется менеджер.</p>
-                        </div>
+                    <div class="modal-alert modal-alert" id="modal-alert-dialog">
+                        <p class="modal-alert__text">Ваша заявка отправлена!</p>
+                        <p class="modal-alert__text">В ближайшее время с вами свяжется менеджер.</p>
+                    </div>
                 
             </main>
 
@@ -877,12 +838,12 @@
 
         
         <script
-            src="https://code.jquery.com/jquery-3.6.4.min.js"
-            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-            crossorigin="anonymous">
-        </script>
-
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
         <script src='./js/bundle.min.js'></script>
     </body>

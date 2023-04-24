@@ -1,14 +1,18 @@
-import React from 'react';
-
 import './App.css';
 import { EmployeeCard } from './components/EmployeeCard';
+import Link from 'antd/es/typography/Link';
+import {  } from 'antd';
 
 function App() {
   return <>
     <nav>
       <ul>
-        <li><Link to ="/">Заявки</Link></li>
-        <li><Link to ="/">Сотрудники</Link></li>
+        <li>
+          <Link>Заявки</Link>
+        </li>
+        <li>
+          <Link>Сотрудники</Link>
+        </li>
       </ul>
     </nav>
     

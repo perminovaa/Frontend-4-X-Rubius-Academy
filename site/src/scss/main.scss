@@ -638,13 +638,10 @@ header {
         top: 50%;
         left: 50%;
         margin-top: -75px;
-        margin-left: -150px;
+        margin-left: -165px;
     }
 }
 
-.block-position {
-    display: none;
-}
 
 .form {
     width: 445px;
@@ -688,6 +685,27 @@ header {
 .dialog-content {
     display: none;
 
+}
+
+._error {
+    box-shadow: 0 0 8px red;
+}
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    display: none;
+
+    img {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+._activeload {
+    display: inline;
 }
 
 /*Подвал*/
