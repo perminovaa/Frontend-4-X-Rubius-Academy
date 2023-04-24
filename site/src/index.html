@@ -65,7 +65,7 @@
                         <div class="header-bottom__text">
                             <h1 class="header-bottom__title">Создай свой образ вместе с нами</h1>
                             <p class="header-bottom__subtitle">Идеальный образ за 60 минут</p>
-                            <button class="btn header-bottom__btn">Записаться онлайн</button>
+                            <button class="btn header-bottom__btn" data-fancybox data-src="#form_dialog">Записаться онлайн</button>
                         </div>
         
                         <div class="header-bottom__lady">
@@ -150,7 +150,7 @@
                                     <a href=""><img src="./image/services.png"></a>
                                     <h3 class="title service-field__title">Маникюр</h3>
                                     <p class="subtitle service-field__subtitle">Аппаратный, комбинированный или классический.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
@@ -158,21 +158,21 @@
                                     <h3 class="title service-field__title">Покрытие гель-лак</h3>
                                     <p class="subtitle service-field__subtitle">Гель-лак наносится в несколько слоев с использование базы и топа. 
                                                         Каждый слой полимеризуется в LED-лампе.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
                                     <a href=""><img src="./image/services.png"></a>
                                     <h3 class="title service-field__title">Бразильский маникюр</h3>
                                     <p class="subtitle service-field__subtitle">Выполняется в одноразовых перчатках наполненных увлажняющим лосьоном.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
                                     <a href=""><img src="./image/services.png"></a>
                                     <h3 class="title service-field__title">Педикюр</h3>
                                     <p class="subtitle service-field__subtitle">Аппаратный, комбинированный или классический.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
 
                                 <div class="service-field__card">
@@ -180,7 +180,7 @@
                                     <h3 class="title service-field__title">Парафинотерапия</h3>
                                     <p class="subtitle service-field__subtitle">Благодаря этой процедуре увлажнение кожи увеличивается на 80%, 
                                                         также выводит токсины и укрепляет суставы.</p>
-                                    <button class="btn"> Записаться</button>
+                                    <button class="btn" data-fancybox data-src="#form_dialog"> Записаться</button>
                                 </div>
                             </div>
                         </div> 
@@ -653,28 +653,28 @@
                         <div class="section-masters__inner">
                             <div class="masters-field">
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img src="./image/irina.png"></a>
+                                    <a class="master-foto" href=""><img src="./image/irina.png" data-fancybox data-src="#form_dialog"></a>
                                     <h3 class="title masters-field__title">Краснова Ирина</h3>
                                     <p class="subtitle masters-field__subtitle">Мастер ногтевого сервиса</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
                                 </div>
 
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img src="./image/Janna.png"></a>
+                                    <a class="master-foto" href="" data-fancybox data-src="#form_dialog"><img src="./image/Janna.png"></a>
                                     <h3 class="title masters-field__title">Калилова Жанна</h3>
                                     <p class="subtitle masters-field__subtitle">Визажист-стилист</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
                                 </div>
 
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img  src="./image/alina.png"></a>
+                                    <a class="master-foto" href="" data-fancybox data-src="#form_dialog"><img  src="./image/alina.png"></a>
                                     <h3 class="title masters-field__title">Киселева Алина</h3>
                                     <p class="subtitle masters-field__subtitle">Парикмахер</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
                                 </div>
 
                                 <div class="masters-field__card">
-                                    <a class="master-foto" href=""><img src="./image/elena.png"></a>
+                                    <a class="master-foto" href="" data-fancybox data-src="#form_dialog"><img src="./image/elena.png"></a>
                                     <h3 class="title masters-field__title">Иванова Елена</h3>
                                     <p class="subtitle masters-field__subtitle">Мастер ногтевого сервиса</p>
                                     <p class="subtitle">ОПЫТ РАБОТЫ 5 ЛЕТ</p>
@@ -762,19 +762,56 @@
                                     <p class="subtitle form__subtitle">Наш менеджер перезвонит в течение нескольких минут, 
                                                         уточнит подробности и согласует время.
                                     </p>
-                                    <input type="name" name="name" placeholder="Ваше имя" required>
-                                    <input type="tel" name="tel" placeholder="+7(___)___-__-__" required>
+                                    <input class="_req" type="name" name="name" placeholder="Ваше имя" >
+                                    <input class= "phone _req" id="phone" type="tel" name="tel" placeholder="+7(___) ___ __-__" >
                                     <button class="btn form__btn" type="submit"> Записаться</button>
                                     <p class="subtitle subtitle_small">Нажимая на кнопку вы соглашаетесь с <a class="policy">обработкой персональных данных</a></p>
                                 </form>
                             </div> 
                         </div>
-                    </div>
-                    <div class="modal-alert">
-                        <p class="modal-alert__text">Спасибо! Менеджер свяжется с Вами в ближайшее время</p>
-                        <button class="btn modal-alert-close">Закрыть</button>
+
+                        <div class="modal-alert modal-alert_position" id="modal-alert">
+                            <p class="modal-alert__text">Ваша заявка отправлена!</p>
+                            <p class="modal-alert__text">В ближайшее время с вами свяжется менеджер.</p>
+                            <button class="btn modal-alert-close">Закрыть</button>
+                        </div>
                     </div>
                 </section> 
+                
+                
+                    <div class="dialog-content">
+                        <form class="form" id="form_dialog">
+                            <h3 class="title form__title">Записаться на услугу</h3>
+                            <p class="subtitle form__subtitle">Наш менеджер перезвонит в течение нескольких минут, 
+                                уточнит подробности и согласует время.</p>    
+                            <input class="_reqD" type="name" name="name" placeholder="Ваше имя">
+                            <input class="phone _reqD" type="tel" name="tel" id="phone"  placeholder="+7(___) ___ __-__">
+                            <label for="mastersList"  class="subtitle form__subtitle">Выберите мастера:</label>
+                            <select name="mastersList" class="mastersList">
+                                <!-- option из бэкенда -->
+                            </select>
+                            
+                            <div class="block-position">
+                                <label for= "serviceList"  class="subtitle form__subtitle">Выберите услугу:</label>
+                                <select class="serviceList" name="serviceList">
+                                    <!-- option из бэкенда -->
+                                </select>
+                            </div>
+
+                            <label for="date"  class="subtitle form__subtitle">Выберите дату:</label>
+                            <input type="date" id="date" name="visitDate" id="visitDate" class="subtitle">
+
+                            <button class="btn form__btn" type="submit"> Записаться</button>
+                            <p class="subtitle subtitle_small">Нажимая на кнопку вы соглашаетесь с <a class="policy">обработкой персональных данных</a></p>
+                        </form>
+                    </div>
+                    <div class="loading"><img src="./image/loading-gif-orange.gif"></div>
+
+                    <div class="modal-alert modal-alert" id="modal-alert-dialog">
+                        <p class="modal-alert__text">Ваша заявка отправлена!</p>
+                        <p class="modal-alert__text">В ближайшее время с вами свяжется менеджер.</p>
+                    </div>
+                
             </main>
 
             <footer>
@@ -801,13 +838,13 @@
 
         
         <script
-            src="https://code.jquery.com/jquery-3.6.4.min.js"
-            integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
-            crossorigin="anonymous"></script>
-
+        src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+        crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"></script>
         <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-        
+        <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
         <script src='./js/bundle.min.js'></script>
-    
     </body>
 </html>

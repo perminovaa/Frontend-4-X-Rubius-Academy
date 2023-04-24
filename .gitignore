@@ -1,4 +1,5 @@
-node_modules
-dist
-src/css
-src/js/bundle.min.js
+site/node_modules
+site/dist
+site/src/css
+site/src/js/bundle.min.js
+server
