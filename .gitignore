@@ -3,3 +3,4 @@ site/dist
 site/src/css
 site/src/js/bundle.min.js
 server
+crm/node_modules

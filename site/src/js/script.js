@@ -1,4 +1,3 @@
-
 // Галерея
 
 $('[data-fancybox]:not(.slick-cloned)').fancybox();
@@ -10,26 +9,26 @@ $('.gallery').slick({
     autoplaySpeed: 2000,
     responsive: [
         {
-          breakpoint: 1350,
-          settings: {
-            slidesToShow: 3,
-            }
+            breakpoint: 1350,
+            settings: {
+                slidesToShow: 3,
+            },
         },
         {
-          breakpoint: 1050, 
-          settings: {
-            slidesToShow: 2,
-            }
+            breakpoint: 1050,
+            settings: {
+                slidesToShow: 2,
+            },
         },
         {
-        breakpoint: 630, 
-        settings: {
-            slidesToShow: 1,
-            }
-        }
-    ]
+            breakpoint: 630,
+            settings: {
+                slidesToShow: 1,
+            },
+        },
+    ],
 });
 
-// маска для телефона 
+// маска для телефона
 
-$(".phone").mask("+7(999) 999 99-99");
+$('.phone').mask('+7(999) 999 99-99');
