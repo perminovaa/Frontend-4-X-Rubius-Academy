@@ -4,8 +4,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { EmployeesPage, LoginPage, OrderPage } from './pages/index';
+import { EmployeesPage, LoginPage, OrdersPage } from './pages/index';
 import { AuthProvider } from './contexts/AuthContext';
+import CreateOrder from './pages/Orders/components/CreateOrder';
 
 
 const root = ReactDOM.createRoot(
@@ -17,7 +18,8 @@ root.render(
       <AuthProvider>
         <Routes>
           <Route path='/' element={<App />}>
-            <Route index element={<OrderPage />} />
+            <Route index element={<OrdersPage />} />
+            <Route path='/CreateOrder' index element={<CreateOrder />} />
             <Route path='/employees' element={<EmployeesPage />} />
           </Route>
 

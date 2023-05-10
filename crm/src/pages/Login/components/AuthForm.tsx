@@ -29,7 +29,7 @@ export function AuthForm(props: AuthFormProps) {
     return (
         <>
             <form ref={form} onSubmit={handleSubmit} className="loginForm" >
-                <Divider style={{ marginTop: '-20px', marginBottom: '25px'}}><Title level={3}style={{color:"darkslateblue"}}>Вход в приложение</Title></Divider>
+                <Divider style={{ marginTop: '-20px', marginBottom: '25px'}}><Title level={3}style={{color:"darkslateblue"}}>Авторизация</Title></Divider>
 
                 <label>
                     <Divider>Имя пользователя</Divider>

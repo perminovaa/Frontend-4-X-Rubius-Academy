@@ -1,7 +1,7 @@
-import jwtDecode from 'jwt-decode';
+import jwtDecode from "jwt-decode";
 import { TOKEN_KEY } from "../constants";
 
-class TokenService {
+export class TokenService {
     setToken(access_token: string) {
         localStorage.setItem(TOKEN_KEY, access_token);
     }
@@ -31,5 +31,4 @@ class TokenService {
     }
 }
 
-export default new TokenService(); 
-  
+export default new TokenService();

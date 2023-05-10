@@ -15,6 +15,6 @@ export function ButtonClick (props: ButtonProps) {
     }
   
     return (
-     <button style={{ width: '300px' }} onClick={handleClick} >{props.children}</button>
+     <Button type="primary" htmlType="button" style={{ width: '300px' }} onClick={handleClick} >{props.children}</Button>
     )
   };

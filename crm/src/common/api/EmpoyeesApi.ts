@@ -1,5 +1,5 @@
 import { employeeDto } from "../dto";
-import { HttpService } from "../services/HttpServise";
+import { HttpService } from "../services/HttpService";
 
 class EmployeesApi extends HttpService {
     constructor() {
