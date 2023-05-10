@@ -1,3 +1,0 @@
-
-import './script';
-import './main';

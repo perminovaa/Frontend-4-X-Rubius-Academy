@@ -1,0 +1,50 @@
+{
+  "name": "frontend-4-x-rubius-academy",
+  "version": "1.0.0",
+  "description": "Перминова Анастасия Александровна",
+  "main": "index.js",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development gulp",
+    "build": "cross-env NODE_ENV=production gulp build",
+    "eslint": "eslint src",
+    "eslint:fix": "eslint src --fix"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint && npm run stylelint",
+      "pre-push": "npm run eslint:fix && npm run stylelint:fix"
+    }
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/plugin-transform-runtime": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "browser-sync": "^2.29.1",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.0",
+    "eslint": "^8.39.0",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "postcss": "^8.4.21",
+    "sass": "^1.60.0",
+    "stylelint": "^15.6.0",
+    "stylelint-config-standard": "^33.0.0",
+    "stylelint-scss": "^4.6.0",
+    "webpack": "^5.79.0",
+    "webpack-stream": "^7.0.0"
+  },
+  "dependencies": {
+    "jquery.maskedinput": "^1.4.1",
+    "maskedinput": "^3.3.11",
+    "normalize.css": "^8.0.1",
+    "slick-carousel": "^1.8.1"
+  }
+}

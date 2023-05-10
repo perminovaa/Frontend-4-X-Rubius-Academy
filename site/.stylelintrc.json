@@ -1,0 +1,16 @@
+{
+    "extends": "stylelint-config-standard",
+    "plugins": [
+        "stylelint-scss"
+    ],
+    "rules": {
+        "color-hex-case": "lower",
+        "indentation": 1,
+        "at-rule-no-unknown": null,
+        "no-descending-specificity": null
+    },
+    "ignoreFiles": [
+        "/dist",
+        "/node_modules"
+    ]
+}
